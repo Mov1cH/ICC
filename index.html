@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="fr" style="color-scheme:light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ICC Saint-Étienne – Impact Centre Chrétien</title>
+<meta name="description" content="ICC Saint-Étienne : cultes du dimanche, jeunes EJP, Familles d'Impact, temps des hommes et prière. 29 rue Élisée Reclus.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'] },
+  colors: {
+    navy: '#0B132B',
+    slate9: '#0F172A',
+    gold: '#D4AF37',
+    goldd: '#C59B27',
+    mist: '#F8FAFC',
+    fog: '#F1F5F9',
+    forest: '#173D31',
+    pine: '#2A6A51',
+    sage: '#A9C2B3',
+    tint: '#EDF3EF'
+  }
+}}};
+</script>
+<style>
+  :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { background:#fff; color:#334155; }
+  .photo { filter: saturate(.85) contrast(.98); }
+  .tab[aria-selected="true"] { background:#0B132B; color:#fff; }
+  :focus-visible { outline: 3px solid #2A6A51; outline-offset: 2px; }
+  .rule::after { content:""; display:block; width:56px; height:3px; background:#2A6A51; margin-top:14px; }
+  .rule.gold::after { background:#D4AF37; }
+  .center.rule::after { margin-inline:auto; }
+  @keyframes rise { from { opacity:0; transform:translateY(16px);} to { opacity:1; transform:none; } }
+  .hero-in { animation: rise .9s ease-out both; }
+  @media (prefers-reduced-motion: reduce) { .hero-in { animation:none; } html { scroll-behavior:auto; } }
+</style>
+</head>
+<body class="font-sans antialiased">
+
+<a href="#contenu" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:bg-gold focus:text-navy focus:px-4 focus:py-2 focus:rounded font-semibold">Aller au contenu</a>
+
+<!-- Navigation principale -->
+<header class="sticky top-0 z-50 bg-navy text-white border-b-2 border-pine" style="padding-top:env(safe-area-inset-top,0px)">
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 h-[72px]" aria-label="Navigation principale">
+    <a href="#accueil" class="flex items-center gap-3.5 leading-tight group">
+      <img src="logo-icc.png" alt="Logo ICC" class="w-10 h-10 object-contain rounded-xl shadow-sm" onerror="this.style.display='none'">
+      <div>
+        <span class="block text-lg font-extrabold tracking-tight">ICC Saint-Étienne</span>
+        <span class="block text-xs text-white/60">Impact Centre Chrétien</span>
+      </div>
+    </a>
+    <ul class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <li><a class="hover:text-sage transition-colors" href="#accueil">Accueil</a></li>
+      <li><a class="hover:text-sage transition-colors" href="#horaires">Horaires</a></li>
+      <li><a class="hover:text-sage transition-colors" href="#evenements">Événements</a></li>
+      <li><a class="hover:text-sage transition-colors" href="#predications">Prédications</a></li>
+      <li><a class="hover:text-sage transition-colors" href="#avis">Avis</a></li>
+      <li><a class="hover:text-sage transition-colors" href="#contact">Contact & RDV</a></li>
+      <li><a href="#premiere-fois" class="bg-gold hover:bg-goldd text-navy font-bold px-5 py-2.5 rounded-full transition-colors shadow-sm">Je viens dimanche</a></li>
+    </ul>
+    <button id="menuBtn" class="md:hidden p-2 -mr-2 rounded" aria-expanded="false" aria-controls="mobileMenu" aria-label="Ouvrir le menu">
+      <svg id="icoOpen" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg id="icoClose" class="hidden" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </nav>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-white/10 px-5 pb-6">
+    <ul class="flex flex-col pt-2 font-medium">
+      <li><a class="block py-3.5 border-b border-white/10" href="#accueil">Accueil</a></li>
+      <li><a class="block py-3.5 border-b border-white/10" href="#horaires">Horaires</a></li>
+      <li><a class="block py-3.5 border-b border-white/10" href="#evenements">Événements</a></li>
+      <li><a class="block py-3.5 border-b border-white/10" href="#predications">Prédications</a></li>
+      <li><a class="block py-3.5 border-b border-white/10" href="#avis">Avis</a></li>
+      <li><a class="block py-3.5 border-b border-white/10" href="#contact">Contact & RDV</a></li>
+      <li><a href="#premiere-fois" class="mt-4 block text-center bg-gold text-navy font-bold px-6 py-3 rounded-full">Je viens dimanche</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="contenu">
+
+<!-- Section Hero -->
+<section id="accueil" class="relative bg-navy text-white overflow-hidden">
+  <img data-img="hero" alt="Assemblée en louange pendant un culte" class="photo absolute inset-0 w-full h-full object-cover" fetchpriority="high" onerror="this.remove()">
+  <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-forest/50"></div>
+  <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-forest/80 via-forest/30 to-transparent"></div>
+  <div class="relative max-w-6xl mx-auto px-5 pt-24 pb-44 md:pt-36 md:pb-52">
+    <div class="max-w-2xl hero-in">
+      <p class="text-sage font-semibold text-lg tracking-wide">Bienvenue à la maison</p>
+      <h1 class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.12] tracking-tight [text-wrap:balance]">
+        Une église, une famille,<br>
+        au cœur de <span class="whitespace-nowrap">Saint-Étienne</span>.
+      </h1>
+      <p class="mt-6 text-lg text-white/85 leading-relaxed max-w-xl">Construire des hommes et des femmes qui inspirent et influencent positivement leur environnement pour la gloire de Dieu et pour l'avancement de l'humanité.</p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#premiere-fois" class="bg-gold hover:bg-goldd text-navy font-bold px-8 py-4 rounded-full transition-colors shadow-lg">Préparer ma visite</a>
+        <a href="#horaires" class="border border-white/50 hover:bg-white hover:text-navy font-semibold px-8 py-4 rounded-full transition-colors">Nos horaires</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Prochain culte -->
+<section aria-label="Prochain culte" class="relative z-10 -mt-24 md:-mt-28 px-5">
+  <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl border-t-4 border-pine grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+    <div class="p-7">
+      <p class="text-sm font-semibold text-pine">Dimanche, 9h00</p>
+      <p class="mt-1 text-xl font-bold text-navy">Culte de célébration</p>
+      <p class="mt-1 text-sm text-slate-600">Louange, message, accueil</p>
+    </div>
+    <div class="p-7">
+      <p class="text-sm font-semibold text-pine">Dimanche, 13h00</p>
+      <p class="mt-1 text-xl font-bold text-navy">EJP, culte des jeunes</p>
+      <p class="mt-1 text-sm text-slate-600">Pour les jeunes prodiges</p>
+    </div>
+    <div class="p-7">
+      <p class="text-sm font-semibold text-pine font-bold">Où nous trouver</p>
+      <p class="mt-1 text-xl font-bold text-navy">29 rue Élisée Reclus</p>
+      <p class="mt-1 text-sm text-slate-600">42000 Saint-Étienne · accès STAS</p>
+    </div>
+  </div>
+</section>
+
+<!-- Première fois -->
+<section id="premiere-fois" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy max-w-2xl leading-tight">Première fois chez nous ? Venez comme vous êtes.</h2>
+    <p class="mt-6 text-slate-600 max-w-2xl leading-relaxed">Voici à quoi ressemble un dimanche à ICC Saint-Étienne. Aucune inscription n'est nécessaire : il suffit de pousser la porte.</p>
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
+      <article class="border-t-2 border-pine pt-5"><h3 class="font-bold text-lg text-navy">Accueil personnalisé</h3><p class="mt-2 text-slate-600 text-sm leading-relaxed">Une équipe vous accueille à l'entrée, vous oriente et vous présente à d'autres personnes.</p></article>
+      <article class="border-t-2 border-pine pt-5"><h3 class="font-bold text-lg text-navy">Louange et message</h3><p class="mt-2 text-slate-600 text-sm leading-relaxed">Un temps de louange vivante, puis un enseignement pour vous édifier au quotidien.</p></article>
+      <article class="border-t-2 border-pine pt-5"><h3 class="font-bold text-lg text-navy">Impact Junior</h3><p class="mt-2 text-slate-600 text-sm leading-relaxed">Vos enfants sont pris en charge avec soin, avec une approche pédagogique pendant le culte.</p></article>
+      <article class="border-t-2 border-pine pt-5"><h3 class="font-bold text-lg text-navy">Collation et échanges</h3><p class="mt-2 text-slate-600 text-sm leading-relaxed">Restez après le culte pour partager une collation et faire connaissance, sans pression.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- Vision -->
+<section id="vision" class="py-24 bg-forest text-white" style="background-image:radial-gradient(circle at 12% 0%, rgba(169,194,179,.20), transparent 46%), radial-gradient(circle at 100% 100%, rgba(11,19,43,.45), transparent 50%)">
+  <div class="max-w-3xl mx-auto px-5 text-center">
+    <h2 class="center rule gold text-3xl md:text-4xl font-extrabold leading-tight">Bâtir des hommes et des femmes d'impact</h2>
+    <p class="mt-8 text-lg text-white/85 leading-relaxed">ICC, Impact Centre Chrétien, est une communauté multiculturelle et intergénérationnelle. Nous croyons que chaque personne a reçu un potentiel à mettre au service des autres : dans sa famille, son quartier, son travail et sa ville.</p>
+  </div>
+</section>
+
+<!-- Rendez-vous réguliers -->
+<section id="horaires" class="py-24 bg-mist">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <h2 id="ministeres" class="rule text-3xl md:text-4xl font-extrabold text-navy">Nos rendez-vous réguliers</h2>
+        <p class="mt-6 text-slate-600 max-w-2xl leading-relaxed">Retrouvez l'ensemble de nos rassemblements hebdomadaires et mensuels pour grandir, prier et partager.</p>
+      </div>
+    </div>
+    
+    <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+      <!-- 1. Culte Dimanche -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
+        <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
+          <img data-img="dimanche" loading="lazy" alt="Assemblée en louange" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Dimanche · 9h00</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-navy">Culte de célébration</h3>
+            <p class="mt-2 text-slate-600 text-sm leading-relaxed">Louange vivante, prédication inspirante et accueil chaleureux. Le rendez-vous central de l'église.</p>
+          </div>
+          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église · Tout public</p>
+        </div>
+      </article>
+
+      <!-- 2. EJP Jeunes -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
+        <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
+          <img data-img="ejp" loading="lazy" alt="Jeunes en louange" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Dimanche · 13h00</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-navy">EJP (Jeunes Prodiges)</h3>
+            <p class="mt-2 text-slate-600 text-sm leading-relaxed">Culte conçu par et pour les jeunes : louange contemporaine, messages adaptés et ambiance fraternelle.</p>
+          </div>
+          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église · Jeunes</p>
+        </div>
+      </article>
+
+      <!-- 3. FIJ Jeunes -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
+        <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
+          <img data-img="fij" loading="lazy" alt="Jeunes réunis en groupe" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Mardi · 19h30</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-navy">FIJ (Familles d'Impact Jeunes)</h3>
+            <p class="mt-2 text-slate-600 text-sm leading-relaxed">Les maisonnées des jeunes chaque mardi soir. Des temps d'édification, de prière et de communion entre jeunes.</p>
+          </div>
+          <p class="mt-4 text-xs font-semibold text-pine pt-3 border-t border-slate-100 font-medium">Tous les mardis soir · Jeunes</p>
+        </div>
+      </article>
+
+      <!-- 4. Le Temps des Hommes -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
+        <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
+          <img data-img="hommes" loading="lazy" alt="Hommes rassemblés fraternellement" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">2ᵉ mercredi du mois · 19h00</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-navy">Le Temps des Hommes</h3>
+            <p class="mt-2 text-slate-600 text-sm leading-relaxed">Rassemblement mensuel dédié aux hommes. Échanges sur le leadership biblique, la famille, le travail et la foi au quotidien.</p>
+          </div>
+          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">Mensuel · Tous les hommes bienvenus</p>
+        </div>
+      </article>
+
+      <!-- 5. Familles d'Impact (FI) -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
+        <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
+          <img data-img="fi" loading="lazy" alt="Groupe de maison en communion" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Jeudi · 19h30</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-navy">Familles d'Impact (FI)</h3>
+            <p class="mt-2 text-slate-600 text-sm leading-relaxed">Cellules de maison réparties dans l'agglomération stéphanoise pour approfondir les enseignements et s'entraider.</p>
+          </div>
+          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">En petits groupes de maison</p>
+        </div>
+      </article>
+
+      <!-- 6. Atmosphère de Prière (ADP) -->
+      <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
+        <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
+          <img data-img="adp" loading="lazy" alt="Temps de prière" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+          <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Vendredi · 19h30</span>
+        </div>
+        <div class="p-6 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-xl font-bold text-navy">Atmosphère de Prière (ADP)</h3>
+            <p class="mt-2 text-slate-600 text-sm leading-relaxed">Grand rassemblement de prière et d'intercession à l'église pour rechercher la présence divine et renouveler ses forces.</p>
+          </div>
+          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église · Tout public</p>
+        </div>
+      </article>
+
+      <!-- Bannière d'accès & GPS -->
+      <article class="lg:col-span-3 bg-navy text-white rounded-2xl p-8 md:p-10 grid md:grid-cols-2 gap-8 items-center border-l-4 border-pine">
+        <div>
+          <p class="text-xs font-bold uppercase tracking-wider text-sage">Lieu de culte à Saint-Étienne</p>
+          <h3 class="mt-2 text-2xl font-bold">Nous rejoindre au 29 rue Élisée Reclus</h3>
+          <p class="mt-3 text-white/80 leading-relaxed">Accessible rapidement en transports stéphanois (tram & bus réseau STAS). Notre équipe vous réserve un accueil chaleureux dès l'entrée.</p>
+        </div>
+        <div class="md:border-l md:border-white/20 md:pl-8 flex flex-col gap-4">
+          <div>
+            <p class="font-bold text-lg">42000 Saint-Étienne</p>
+            <p class="text-sm text-white/70">Tramway et bus STAS à proximité immédiate.</p>
+          </div>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a target="_blank" rel="noopener" href="https://maps.app.goo.gl/2jffYvdZNAPfYmze7" class="inline-flex items-center gap-2 bg-gold hover:bg-goldd text-navy font-bold px-5 py-2.5 rounded-full text-sm transition-colors shadow-sm">
+              Ouvrir l'itinéraire Google Maps →
+            </a>
+            <a id="btnAvisMap" target="_blank" rel="noopener" href="https://maps.google.com/?q=ICC+Saint-%C3%89tienne" class="inline-flex items-center gap-2 border border-white/40 hover:bg-white/10 text-white font-semibold px-5 py-2.5 rounded-full text-sm transition-colors">
+              Laisser un avis Google
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Actualités et Événements -->
+<section id="evenements" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Actualités & Événements</h2>
+        <p class="mt-6 text-slate-600 max-w-xl leading-relaxed">Conférences, séminaires, veillées spéciales et temps forts de notre communauté.</p>
+      </div>
+
+      <div role="tablist" aria-label="Type d'événements" class="inline-flex p-1 rounded-full bg-fog self-start md:self-auto">
+        <button role="tab" id="tab-a-venir" aria-selected="true" aria-controls="events-future" data-tab-events="future" class="tab-ev px-5 py-2.5 rounded-full font-semibold text-sm transition-colors bg-navy text-white">À venir</button>
+        <button role="tab" id="tab-passes" aria-selected="false" aria-controls="events-past" data-tab-events="past" class="tab-ev px-5 py-2.5 rounded-full font-semibold text-sm transition-colors text-navy">Événements passés</button>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <div id="events-future" class="grid md:grid-cols-3 gap-7">
+        
+        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between hover:border-pine hover:shadow-lg transition-all">
+          <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
+            <img data-img="ev_louange" loading="lazy" alt="Soirée Louange & Témoignages" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3.5 py-1.5 rounded-xl shadow-md text-center">
+              <span class="block text-xl font-extrabold text-navy leading-tight">25</span>
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-pine">Octobre</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-navy">Soirée Louange & Témoignages</h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">Un temps prolongé d'adoration et de partage fraternel pour clore le mois ensemble.</p>
+              <p class="mt-4 text-xs font-semibold text-slate-500">19h30 · À l'église (29 rue Élisée Reclus)</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100">
+              <span class="text-xs font-semibold text-pine">Entrée libre · Tout public</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between hover:border-pine hover:shadow-lg transition-all">
+          <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
+            <img data-img="ev_ejp" loading="lazy" alt="Célébration Spéciale EJP" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3.5 py-1.5 rounded-xl shadow-md text-center">
+              <span class="block text-xl font-extrabold text-navy leading-tight">15</span>
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-pine">Novembre</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-navy">Célébration Spéciale EJP</h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">Rassemblement des jeunes d'impact : musique contemporaine, temps d'échange et collation festive.</p>
+              <p class="mt-4 text-xs font-semibold text-slate-500">13h00 · Entrée gratuite</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100">
+              <span class="text-xs font-semibold text-pine">Réservé 15–30 ans</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between hover:border-pine hover:shadow-lg transition-all">
+          <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
+            <img data-img="ev_veillee" loading="lazy" alt="Veillée de Traversée" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3.5 py-1.5 rounded-xl shadow-md text-center">
+              <span class="block text-xl font-extrabold text-navy leading-tight">31</span>
+              <span class="block text-[10px] font-bold uppercase tracking-wider text-pine">Décembre</span>
+            </div>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-xl font-bold text-navy">Veillée de Traversée</h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">Franchissons ensemble la nouvelle année dans la prière, l'action de grâce et la louange.</p>
+              <p class="mt-4 text-xs font-semibold text-slate-500">Dès 21h30 · À l'église</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-100">
+              <span class="text-xs font-semibold text-pine">Sur place & en direct</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div id="events-past" class="hidden grid md:grid-cols-3 gap-7">
+        
+        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
+          <div class="p-6">
+            <span class="text-xs font-semibold text-slate-400">Septembre</span>
+            <h3 class="mt-2 text-lg font-bold text-navy">Rentrée des Familles d'Impact</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Reprise officielle des cellules de maison dans toute l'agglomération stéphanoise.</p>
+            <span class="mt-4 inline-block text-xs font-semibold text-slate-500">Événement terminé</span>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
+          <div class="p-6">
+            <span class="text-xs font-semibold text-slate-400">Juin</span>
+            <h3 class="mt-2 text-lg font-bold text-navy">Baptêmes d'Immersion</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Une journée mémorable de célébration et de témoignages publics d'engagement de foi.</p>
+            <span class="mt-4 inline-block text-xs font-semibold text-slate-500">Événement terminé</span>
+          </div>
+        </article>
+
+        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
+          <div class="p-6">
+            <span class="text-xs font-semibold text-slate-400">Pâques</span>
+            <h3 class="mt-2 text-lg font-bold text-navy">Culte de Résurrection</h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Célébration spéciale suivie d'un temps de partage convivial avec nos visiteurs.</p>
+            <span class="mt-4 inline-block text-xs font-semibold text-slate-500">Événement terminé</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Cultes en direct & Replay dominical -->
+<section id="direct" class="py-24 bg-mist">
+  <div class="max-w-4xl mx-auto px-5">
+    <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Culte en direct et derniers replays</h2>
+    <p class="mt-6 text-slate-600 leading-relaxed">Vous ne pouvez pas vous déplacer ? Participez au culte en direct chaque dimanche matin ou revivez la dernière célébration dominicale diffusée sur ICC TV.</p>
+    
+    <div id="videoBox" class="mt-10 relative aspect-video rounded-2xl overflow-hidden bg-navy shadow-xl group cursor-pointer border-b-4 border-pine">
+      <img id="videoThumb" alt="Dernier live ou replay de culte dominical ICC TV" class="hidden absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+      <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/60 to-forest/30 group-hover:via-forest/40 transition-colors"></div>
+      
+      <div id="videoCoverContent" class="absolute inset-0 grid place-items-center text-center text-white p-6">
+        <div class="max-w-2xl px-4">
+          <button id="playBtn" class="mx-auto grid place-items-center w-20 h-20 rounded-full bg-gold hover:bg-goldd text-navy transition-all shadow-xl hover:scale-110 active:scale-95" aria-label="Lancer la vidéo du culte">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <span class="inline-block mt-4 text-[11px] font-bold uppercase tracking-widest text-sage bg-forest/80 px-3 py-1 rounded-full border border-sage/30">Culte du dimanche · Replay</span>
+          <p id="videoTitle" class="mt-3 font-bold text-xl sm:text-2xl line-clamp-2">Chargement du culte dominical...</p>
+          <p id="videoHint" class="text-sm text-white/80 mt-2 font-medium">Appuyez pour lancer la célébration</p>
+        </div>
+      </div>
+    </div>
+
+    <a data-social="youtube" target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV/streams" class="mt-6 inline-flex items-center gap-2 font-semibold text-navy border-b-2 border-pine pb-0.5 hover:text-pine transition-colors">
+      Tous les replays et cultes en direct sur YouTube (@ICCTV) →
+    </a>
+  </div>
+</section>
+
+<!-- Prédications & Temps forts avec les 3 vraies vidéos YouTube -->
+<section id="predications" class="py-24 bg-white border-t border-slate-100">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+      <div>
+        <p class="text-xs font-bold uppercase tracking-wider text-pine font-medium">Prédications & Temps forts</p>
+        <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Les messages de Saint-Étienne</h2>
+        <p class="mt-6 text-slate-600 max-w-xl leading-relaxed">Retrouvez les enseignements et moments forts récents avec leurs vidéos complètes.</p>
+      </div>
+      <a target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV" class="text-sm font-bold text-navy hover:text-pine transition-colors inline-flex items-center gap-1 self-start md:self-auto">
+        Voir plus de vidéos sur YouTube →
+      </a>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-3 gap-7">
+      
+      <!-- Carte Vidéo 1 : Ps Alexandre AMAZOU -->
+      <article class="bg-mist rounded-2xl overflow-hidden border border-slate-200 flex flex-col hover:border-pine transition-colors">
+        <div class="local-video-box relative aspect-video bg-navy border-b-4 border-pine overflow-hidden cursor-pointer group" data-vindex="0">
+          <img class="local-thumb absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://img.youtube.com/vi/GgfC4MCtx9k/hqdefault.jpg" alt="Dieu se rassemble des Hommes">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent flex items-center justify-center">
+            <span class="w-12 h-12 rounded-full bg-white/90 text-navy flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </div>
+          <span class="absolute bottom-3 right-3 bg-black/70 text-white text-[11px] font-semibold px-2 py-0.5 rounded">Campus Saint-Étienne</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold text-pine">Enseignement</span>
+          <h3 class="local-title mt-1 text-lg font-bold text-navy line-clamp-2">Dieu se rassemble des Hommes - Ps Alexandre AMAZOU</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Prédication et enseignement dominical sur le mandat divin et l'édification de l'Église.</p>
+        </div>
+      </article>
+
+      <!-- Carte Vidéo 2 : Samuel EBOUMBOU (EJP) -->
+      <article class="bg-mist rounded-2xl overflow-hidden border border-slate-200 flex flex-col hover:border-pine transition-colors">
+        <div class="local-video-box relative aspect-video bg-navy border-b-4 border-pine overflow-hidden cursor-pointer group" data-vindex="1">
+          <img class="local-thumb absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://img.youtube.com/vi/F7eonbizjM4/hqdefault.jpg" alt="TRAVAILLE AVEC DIEU À TA PROPRE CONSTRUCTION">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent flex items-center justify-center">
+            <span class="w-12 h-12 rounded-full bg-white/90 text-navy flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </div>
+          <span class="absolute bottom-3 right-3 bg-black/70 text-white text-[11px] font-semibold px-2 py-0.5 rounded">EJP Saint-Étienne</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold text-pine">Jeunes</span>
+          <h3 class="local-title mt-1 text-lg font-bold text-navy line-clamp-2">TRAVAILLE AVEC DIEU À TA PROPRE CONSTRUCTION - Samuel EBOUMBOU</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Exhortation puissante lors du rassemblement des jeunes du dimanche après-midi.</p>
+        </div>
+      </article>
+
+      <!-- Carte Vidéo 3 : Clôture 24h de prières (ADP) -->
+      <article class="bg-mist rounded-2xl overflow-hidden border border-slate-200 flex flex-col hover:border-pine transition-colors">
+        <div class="local-video-box relative aspect-video bg-navy border-b-4 border-pine overflow-hidden cursor-pointer group" data-vindex="2">
+          <img class="local-thumb absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://img.youtube.com/vi/Huk1okUJh6U/hqdefault.jpg" alt="Clôture - 24h non-stop de prières">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent flex items-center justify-center">
+            <span class="w-12 h-12 rounded-full bg-white/90 text-navy flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </span>
+          </div>
+          <span class="absolute bottom-3 right-3 bg-black/70 text-white text-[11px] font-semibold px-2 py-0.5 rounded">Atmosphère de Prière</span>
+        </div>
+        <div class="p-6">
+          <span class="text-xs font-semibold text-pine">Intercession</span>
+          <h3 class="local-title mt-1 text-lg font-bold text-navy line-clamp-2">Clôture - 24h non-stop de prières</h3>
+          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Grand temps d'intercession et d'adoration communautaire dans la présence de Dieu.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Soutenir l'œuvre -->
+<section id="dons" class="py-24 bg-tint">
+  <div class="max-w-5xl mx-auto px-5 grid md:grid-cols-5 gap-10 items-center">
+    <div class="md:col-span-3">
+      <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Soutenir l'œuvre</h2>
+      <blockquote class="mt-6 p-6 rounded-2xl bg-white border-l-4 border-pine shadow-sm">
+        <p class="text-base sm:text-lg italic text-navy leading-relaxed">
+          « Que chacun donne comme il l'a résolu en son cœur, sans tristesse ni contrainte ; car Dieu aime celui qui donne avec joie. »
+        </p>
+        <cite class="mt-3 block text-xs uppercase tracking-wider font-bold text-pine not-italic">
+          — 2 Corinthiens 9 : 7
+        </cite>
+      </blockquote>
+      <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+        Votre générosité soutient l'accueil des personnes, les programmes pour les enfants, les jeunes, ainsi que l'ensemble des actions menées à Saint-Étienne.
+      </p>
+    </div>
+    <div class="md:col-span-2 bg-white rounded-2xl p-8 text-center shadow-sm border border-slate-200 border-t-4 border-t-pine">
+      <p class="font-bold text-navy text-lg">Donner à ICC Saint-Étienne</p>
+      <p class="mt-2 text-xs text-slate-500">Chaque don compte et reste un geste libre et personnel.</p>
+      <a id="donBtn" href="mailto:iccsaintetienne@gmail.com?subject=Don%20ICC%20Saint-%C3%89tienne" class="mt-5 block bg-gold hover:bg-goldd text-navy font-bold px-6 py-3.5 rounded-full transition-colors shadow-sm">Faire un don</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Avis Google -->
+<section id="avis" class="py-24 bg-white border-t border-slate-100">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 pb-4">
+      <div>
+        <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Avis de la communauté</h2>
+        <p class="mt-6 text-slate-600 max-w-xl leading-relaxed">Retrouvez les retours authentiques laissés par les membres et visiteurs sur notre fiche Google.</p>
+      </div>
+
+      <div class="flex items-center gap-4 bg-mist border border-slate-200 rounded-2xl p-4 self-start md:self-auto">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-extrabold text-navy">5,0</span>
+            <div class="flex gap-0.5 text-gold" aria-label="Note de 5 sur 5">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+          </div>
+          <span class="text-xs text-slate-500">Avis vérifiés sur Google</span>
+        </div>
+        <a id="btnAvisDirect" target="_blank" rel="noopener" href="https://maps.google.com/?q=ICC+Saint-%C3%89tienne" class="text-xs font-bold text-navy hover:text-pine border-l border-slate-300 pl-4 py-1">
+          Laisser un avis →
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-7">
+      
+      <!-- Avis 1 : Ayité Ajavon -->
+      <article class="bg-mist rounded-2xl p-7 border border-slate-200 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex gap-1 text-gold">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <span class="text-xs text-slate-400">Google</span>
+          </div>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed italic">
+            « Une église dynamique, accueillante et remplie de l'amour de Dieu. Les messages sont inspirants, la louange est édifiante et l'atmosphère familiale. Un véritable lieu de croissance spirituelle et de transformation. Je recommande fortement ! »
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-200/60">
+          <p class="font-bold text-sm text-navy">Ayité Ajavon</p>
+          <span class="text-xs text-slate-500">Avis vérifié Google</span>
+        </div>
+      </article>
+
+      <!-- Avis 2 : Cynthia HOD -->
+      <article class="bg-mist rounded-2xl p-7 border border-slate-200 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex gap-1 text-gold">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <span class="text-xs text-slate-400">Google</span>
+          </div>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed italic">
+            « Atmosphère de célébration incroyable ! L’accueil est chaleureux et les personnes très bienveillantes. On ressent une vraie convivialité et la présence de Dieu. Ravie de faire partie de cette église. »
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-200/60">
+          <p class="font-bold text-sm text-navy">Cynthia HOD</p>
+          <span class="text-xs text-slate-500">Avis vérifié Google</span>
+        </div>
+      </article>
+
+      <!-- Avis 3 : Esther A. Kouacou -->
+      <article class="bg-mist rounded-2xl p-7 border border-slate-200 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex gap-1 text-gold">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <span class="text-xs text-slate-400">Google</span>
+          </div>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed italic">
+            « C’est mon église. Je bénis le Seigneur de ce qu'il est en train de faire dans cette belle famille. Là où l’église était hier n’est pas là où nous sommes actuellement et ne sera pas là où on sera demain car on va encore plus progresser, parler de Christ au travers de nos messages, l’évangélisation, les actes de compassion, d’amour. Tout simplement manifester Christ comme DIEU nous le recommande. Quelle grâce. Et mention spéciale pour l’EGLISE DES JEUNES PRODIGES. So, si tu es jeune, rejoins nous. »
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-200/60">
+          <p class="font-bold text-sm text-navy">Esther A. Kouacou</p>
+          <span class="text-xs text-slate-500">Avis vérifié Google</span>
+        </div>
+      </article>
+
+      <!-- Avis 4 : Madame Shugga D Rosenbloom -->
+      <article class="bg-mist rounded-2xl p-7 border border-slate-200 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between">
+            <div class="flex gap-1 text-gold">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <span class="text-xs text-slate-400">Google · Local Guide</span>
+          </div>
+          <p class="mt-4 text-sm text-slate-600 leading-relaxed italic">
+            "I celebrate this place…it was worth the visit. Non-English service. But it was spiritually sound. I will say this…I wish ministres were more in tuned with the new testament church. Help the hungry homeless widow and orphans. Don't just preach the Word but discern the needs of the people/person. However, it was welcoming and spirit filled."
+          </p>
+        </div>
+        <div class="mt-6 pt-4 border-t border-slate-200/60">
+          <p class="font-bold text-sm text-navy">Madame Shugga D Rosenbloom</p>
+          <span class="text-xs text-slate-500">Avis vérifié Google</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact, Requête de prière & RDV Pastoral -->
+<section id="contact" class="py-24 bg-mist border-t border-slate-100">
+  <div class="max-w-3xl mx-auto px-5">
+    <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Échanger avec nous</h2>
+    <p class="mt-6 text-slate-600 leading-relaxed">Une question, un sujet de prière ou besoin d'un échange avec le pasteur ou un membre du conseil pastoral ? Choisissez votre demande.</p>
+    
+    <div role="tablist" aria-label="Type de message" class="mt-8 flex flex-wrap gap-2 p-1.5 rounded-2xl bg-fog">
+      <button role="tab" id="tab-q" aria-selected="true" aria-controls="form" data-type="question" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">Question</button>
+      <button role="tab" id="tab-p" aria-selected="false" aria-controls="form" data-type="priere" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">Sujet de prière</button>
+      <button role="tab" id="tab-rdv" aria-selected="false" aria-controls="form" data-type="rdv" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">RDV pastoral / Conseil</button>
+    </div>
+
+    <form id="form" role="tabpanel" class="mt-6 space-y-5" novalidate>
+      <p id="typeNote" class="hidden rounded-xl bg-tint border-l-4 border-pine text-navy text-sm p-4 shadow-sm"></p>
+      
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="nom" class="block text-sm font-semibold text-navy mb-1">Prénom & Nom</label>
+          <input id="nom" name="nom" autocomplete="given-name" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-pine">
+          <p class="err hidden text-sm text-red-700 mt-1">Indiquez votre nom.</p>
+        </div>
+        <div>
+          <label for="tel" class="block text-sm font-semibold text-navy mb-1">Téléphone <span id="telOpt" class="font-normal text-slate-500">(recommandé pour RDV)</span></label>
+          <input id="tel" name="tel" type="tel" autocomplete="tel" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-pine">
+        </div>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-semibold text-navy mb-1">E-mail <span class="font-normal text-slate-500">(facultatif)</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-pine">
+        <p class="err hidden text-sm text-red-700 mt-1">Saisissez une adresse e-mail valide.</p>
+      </div>
+
+      <div>
+        <label for="msg" id="msgLabel" class="block text-sm font-semibold text-navy mb-1">Votre message</label>
+        <textarea id="msg" name="msg" rows="5" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-pine"></textarea>
+        <p class="err hidden text-sm text-red-700 mt-1">Écrivez quelques mots avant d'envoyer.</p>
+      </div>
+
+      <button type="submit" id="sendLabel" class="bg-navy hover:bg-slate9 text-white font-bold px-8 py-3.5 rounded-full transition-colors shadow-sm">
+        Envoyer ma question
+      </button>
+    </form>
+
+    <div id="confirm" class="hidden mt-6 rounded-2xl bg-tint border-l-4 border-pine p-6 shadow-sm" role="status" aria-live="polite" tabindex="-1">
+      <p id="confirmTitle" class="font-bold text-navy text-lg"></p>
+      <p id="confirmText" class="mt-2 text-slate-600 text-sm leading-relaxed"></p>
+      <div class="mt-4 flex flex-wrap items-center gap-5">
+        <a id="mailLink" href="#" class="bg-gold hover:bg-goldd text-navy font-bold px-6 py-2.5 rounded-full text-sm transition-colors">Envoyer par e-mail</a>
+        <button id="again" type="button" class="font-semibold text-navy underline text-sm">Écrire un autre message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Pied de page -->
+<footer class="bg-navy text-white border-t-4 border-pine">
+  <div class="max-w-6xl mx-auto px-5 py-16 grid gap-10 md:grid-cols-4">
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="logo-icc.png" alt="Logo ICC" class="w-9 h-9 object-contain rounded-lg" onerror="this.style.display='none'">
+        <div>
+          <p class="text-xl font-extrabold">ICC Saint-Étienne</p>
+          <p class="text-white/60 text-xs">Impact Centre Chrétien</p>
+        </div>
+      </div>
+      <p class="text-white/60 text-sm mt-3 leading-relaxed">Une église, une famille.</p>
+      <div class="mt-4">
+        <a id="btnAvisFooter" target="_blank" rel="noopener" href="https://maps.google.com/?q=ICC+Saint-%C3%89tienne" class="inline-flex items-center gap-2 text-xs text-white/80 hover:text-sage transition-colors border border-white/20 rounded-lg px-3 py-1.5 bg-white/5">
+          <span>Consulter les avis Google</span>
+          <span>→</span>
+        </a>
+      </div>
+      <ul class="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+        <li><a data-social="facebook" target="_blank" rel="noopener" href="https://www.facebook.com/p/Impact-Centre-Chr%C3%A9tien-%C3%89glise-de-Saint-%C3%89tienne-100071847546439/?locale=fr_FR" class="border-b border-sage pb-0.5 hover:text-sage">Facebook</a></li>
+        <li><a data-social="instagram" target="_blank" rel="noopener" href="https://www.instagram.com/iccsaintetienne/?hl=fr" class="border-b border-sage pb-0.5 hover:text-sage">Instagram</a></li>
+        <li><a data-social="youtube" target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV/streams" class="border-b border-sage pb-0.5 hover:text-sage">YouTube</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-bold text-sage">Adresse & Accès</p>
+      <address class="not-italic mt-3 text-sm text-white/85 leading-relaxed">
+        29 rue Élisée Reclus<br>
+        42000 Saint-Étienne
+      </address>
+      <p class="mt-2 text-sm text-sage font-medium">Tram & bus STAS à proximité immédiate.</p>
+    </div>
+    <div>
+      <p class="font-bold text-sage">Rendez-vous clés</p>
+      <ul class="mt-3 text-sm text-white/85 space-y-1.5">
+        <li>Dimanche 9h : Culte de célébration</li>
+        <li>Dimanche 13h : EJP Jeunes</li>
+        <li>Mardi 19h30 : FIJ (Jeunes)</li>
+        <li>2ᵉ mercredi 19h : Temps des Hommes</li>
+        <li>Jeudi 19h30 : Familles d'Impact</li>
+        <li>Vendredi 19h30 : Prière (ADP)</li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-bold text-sage">Contact & Pasteur</p>
+      <p class="mt-3 text-sm text-white/70">Besoin d'un rendez-vous ou d'un conseil ?</p>
+      <a href="mailto:iccsaintetienne@gmail.com" class="mt-2 inline-block text-sm text-white/85 hover:text-sage break-all">iccsaintetienne@gmail.com</a>
+    </div>
+  </div>
+  <p class="border-t border-white/10 text-center text-xs text-white/50 py-5" style="padding-bottom:calc(1.25rem + env(safe-area-inset-bottom,0px))">© <span id="year"></span> ICC Saint-Étienne. Tous droits réservés.</p>
+</footer>
+
+<script>
+  // ==== GESTION DES PHOTOS ====
+  const U = id => 'https://unsplash.com/photos/' + id + '/download?force=true&w=1600';
+  const IMG = {
+    hero:       U('nNTW7lsCzDQ'),
+    dimanche:   U('M1ZUtHSWXHI'),
+    ejp:        U('zPuyJ-YPfiQ'),
+    fij:        U('OuqUqju4R7Y'),
+    hommes:     U('wD1LRb9OeEo'),
+    fi:         U('OuqUqju4R7Y'),
+    adp:        U('c9Crjhps598'),
+    ev_louange: U('M1ZUtHSWXHI'),
+    ev_ejp:     U('zPuyJ-YPfiQ'),
+    ev_veillee: U('OuqUqju4R7Y')
+  };
+
+  // ==== CONFIGURATION LIENS & RÉSEAUX ====
+  const CONFIG = {
+    youtubeChannelId: "UCAIUeduIUX1E6sTIoW-vbUQ",
+    youtubeVideoId: "",
+    youtubeStreams: "https://www.youtube.com/@ICCTV/streams",
+    localVideoIds: [
+      "GgfC4MCtx9k", // 1. Dieu se rassemble des Hommes - Ps Alexandre AMAZOU
+      "F7eonbizjM4", // 2. TRAVAILLE AVEC DIEU À TA PROPRE CONSTRUCTION - Samuel EBOUMBOU
+      "Huk1okUJh6U"  // 3. Clôture - 24h non-stop de prières
+    ],
+    facebook: "https://www.facebook.com/p/Impact-Centre-Chr%C3%A9tien-%C3%89glise-de-Saint-%C3%89tienne-100071847546439/?locale=fr_FR",
+    instagram: "https://www.instagram.com/iccsaintetienne/?hl=fr",
+    googleReviews: "https://maps.google.com/?q=ICC+Saint-%C3%89tienne",
+    donation: ""
+  };
+  const EMAIL = "iccsaintetienne@gmail.com";
+
+  // Injection des photos
+  document.querySelectorAll('[data-img]').forEach(i => { if (IMG[i.dataset.img]) i.src = IMG[i.dataset.img]; });
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.querySelectorAll('[data-social]').forEach(a => {
+    if (a.dataset.social === 'youtube') a.href = CONFIG.youtubeStreams;
+    else if (CONFIG[a.dataset.social]) a.href = CONFIG[a.dataset.social];
+  });
+  if (CONFIG.googleReviews) {
+    const b1 = document.getElementById('btnAvisMap');
+    const b2 = document.getElementById('btnAvisFooter');
+    const b3 = document.getElementById('btnAvisDirect');
+    if (b1) b1.href = CONFIG.googleReviews;
+    if (b2) b2.href = CONFIG.googleReviews;
+    if (b3) b3.href = CONFIG.googleReviews;
+  }
+  if (CONFIG.donation) { const d = document.getElementById('donBtn'); d.href = CONFIG.donation; d.target = '_blank'; d.rel = 'noopener'; }
+
+  // ==== DÉTECTION DU CULTE DU DIMANCHE (LIVE YOUTUBE) ====
+  const videoBox = document.getElementById('videoBox');
+  const videoThumb = document.getElementById('videoThumb');
+  const videoTitle = document.getElementById('videoTitle');
+  const videoHint = document.getElementById('videoHint');
+
+  async function fetchLatestLiveStream() {
+    try {
+      const streamPlaylistId = 'UULV' + CONFIG.youtubeChannelId.slice(2);
+      const feedUrl = `https://www.youtube.com/feeds/videos.xml?playlist_id=${streamPlaylistId}`;
+      let res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`);
+      let data = await res.json();
+
+      if (!data.items || data.items.length === 0) {
+        const altUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${CONFIG.youtubeChannelId}`;
+        res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(altUrl)}`);
+        data = await res.json();
+      }
+
+      if (data.items && data.items.length > 0) {
+        const sundayLive = data.items.find(item => {
+          const streamDate = new Date(item.pubDate);
+          return streamDate.getDay() === 0;
+        });
+
+        const selectedItem = sundayLive || data.items[0];
+
+        let vId = "";
+        if (selectedItem.link && selectedItem.link.includes('v=')) {
+          vId = selectedItem.link.split('v=')[1].split('&')[0];
+        } else if (selectedItem.guid) {
+          vId = selectedItem.guid.replace('yt:video:', '');
+        }
+
+        if (vId) {
+          CONFIG.youtubeVideoId = vId;
+          videoThumb.src = `https://img.youtube.com/vi/${vId}/maxresdefault.jpg`;
+          videoThumb.onerror = () => {
+            videoThumb.src = `https://img.youtube.com/vi/${vId}/hqdefault.jpg`;
+          };
+          videoThumb.classList.remove('hidden');
+          videoTitle.textContent = selectedItem.title;
+          videoHint.textContent = "Replay du culte dominical · Cliquer pour regarder";
+        }
+      }
+    } catch (err) {
+      console.warn("Flux non accessible :", err);
+      videoTitle.textContent = "Culte de célébration du dimanche";
+      videoHint.textContent = "Accéder aux directs sur la chaîne YouTube";
+    }
+  }
+
+  fetchLatestLiveStream();
+
+  videoBox.addEventListener('click', () => {
+    if (CONFIG.youtubeVideoId) {
+      videoBox.innerHTML = `<iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/${CONFIG.youtubeVideoId}?autoplay=1&rel=0" title="${videoTitle.textContent}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+    } else {
+      window.open(CONFIG.youtubeStreams, '_blank', 'noopener');
+    }
+  });
+
+  // ==== GESTION DES 3 VIDÉOS LOCALES ====
+  function initLocalVideos() {
+    const boxes = document.querySelectorAll('.local-video-box');
+    boxes.forEach(box => {
+      const index = parseInt(box.dataset.vindex, 10);
+      const vId = CONFIG.localVideoIds[index];
+      if (!vId) return;
+
+      const card = box.closest('article');
+      const titleEl = card.querySelector('.local-title');
+
+      box.addEventListener('click', () => {
+        box.innerHTML = `<iframe class="absolute inset-0 w-full h-full" src="https://www.youtube-nocookie.com/embed/${vId}?autoplay=1&rel=0" title="${titleEl ? titleEl.textContent : ''}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;
+      });
+    });
+  }
+
+  initLocalVideos();
+
+  // Menu mobile
+  const btn = document.getElementById('menuBtn'), menu = document.getElementById('mobileMenu');
+  function setMenu(open) {
+    menu.classList.toggle('hidden', !open);
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    document.getElementById('icoOpen').classList.toggle('hidden', open);
+    document.getElementById('icoClose').classList.toggle('hidden', !open);
+  }
+  btn.addEventListener('click', () => setMenu(menu.classList.contains('hidden')));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // Onglets Événements
+  const tabsEvents = document.querySelectorAll('.tab-ev');
+  const futureBox = document.getElementById('events-future');
+  const pastBox = document.getElementById('events-past');
+
+  tabsEvents.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabsEvents.forEach(t => {
+        t.setAttribute('aria-selected', 'false');
+        t.className = 'tab-ev px-5 py-2.5 rounded-full font-semibold text-sm transition-colors text-navy';
+      });
+      tab.setAttribute('aria-selected', 'true');
+      tab.className = 'tab-ev px-5 py-2.5 rounded-full font-semibold text-sm transition-colors bg-navy text-white';
+
+      const isFuture = tab.dataset.tabEvents === 'future';
+      futureBox.classList.toggle('hidden', !isFuture);
+      pastBox.classList.toggle('hidden', isFuture);
+    });
+  });
+
+  // Formulaire interactif à 3 options
+  const tabs = document.querySelectorAll('.tab'), form = document.getElementById('form'), confirmBox = document.getElementById('confirm');
+  const typeNote = document.getElementById('typeNote');
+  let type = 'question';
+
+  const TEXTS = {
+    question: {
+      label: 'Votre question',
+      send: 'Envoyer ma question',
+      note: '',
+      title: 'Merci, votre question est prête.',
+      body: 'Nous vous répondrons avec joie dans les meilleurs délais.'
+    },
+    priere: {
+      label: 'Votre sujet de prière',
+      send: 'Envoyer ma demande de prière',
+      note: 'Votre sujet de prière est strictement confidentiel et porté par notre équipe d’intercession.',
+      title: 'Votre demande de prière est prête.',
+      body: 'Nous prions avec foi pour votre situation.'
+    },
+    rdv: {
+      label: 'Précisez l’objet de votre demande de rendez-vous',
+      send: 'Demander un rendez-vous pastoral',
+      note: 'Pour un entretien avec le pasteur ou un membre du conseil, laissez votre numéro afin que nous puissions convenir d’un créneau.',
+      title: 'Demande de rendez-vous enregistrée.',
+      body: 'Le berger ou un membre du conseil prendra contact avec vous rapidement pour convenir d’un échange.'
+    }
+  };
+
+  function setType(t) {
+    type = t; const c = TEXTS[t];
+    tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.type === t));
+    document.getElementById('msgLabel').textContent = c.label;
+    document.getElementById('sendLabel').textContent = c.send;
+    if (c.note) {
+      typeNote.textContent = c.note;
+      typeNote.classList.remove('hidden');
+    } else {
+      typeNote.classList.add('hidden');
+    }
+  }
+  tabs.forEach(b => b.addEventListener('click', () => setType(b.dataset.type)));
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const nom = form.nom, tel = form.tel, email = form.email, msg = form.msg, errs = form.querySelectorAll('.err');
+    const okMail = !email.value.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    const checks = [!!nom.value.trim(), okMail, !!msg.value.trim()];
+    
+    [nom, email, msg].forEach((f, i) => {
+      errs[i].classList.toggle('hidden', checks[i]);
+      f.setAttribute('aria-invalid', !checks[i]);
+    });
+
+    if (!checks.every(Boolean)) {
+      [nom, email, msg][checks.indexOf(false)].focus();
+      return;
+    }
+
+    const c = TEXTS[type];
+    const prefix = type === 'rdv' ? 'Demande de RDV Pastoral' : (type === 'priere' ? 'Demande de Prière' : 'Question');
+    const subject = `${prefix} – ${nom.value.trim()}`;
+    const body = `${msg.value.trim()}\n\nContact : ${nom.value.trim()}\nTéléphone : ${tel.value.trim() || 'Non renseigné'}\nE-mail : ${email.value.trim() || 'Non renseigné'}`;
+
+    document.getElementById('confirmTitle').textContent = c.title;
+    document.getElementById('confirmText').textContent = c.body;
+    document.getElementById('mailLink').href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    form.classList.add('hidden');
+    confirmBox.classList.remove('hidden');
+    confirmBox.focus();
+  });
+
+  document.getElementById('again').addEventListener('click', () => {
+    form.reset();
+    confirmBox.classList.add('hidden');
+    form.classList.remove('hidden');
+    form.nom.focus();
+  });
+</script>
+</body>
+</html>

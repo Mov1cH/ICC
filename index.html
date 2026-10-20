@@ -49,7 +49,7 @@ tailwind.config = { theme: { extend: {
 <header class="sticky top-0 z-50 bg-navy text-white border-b-2 border-pine" style="padding-top:env(safe-area-inset-top,0px)">
   <nav class="max-w-6xl mx-auto flex items-center justify-between px-5 h-[72px]" aria-label="Navigation principale">
     <a href="#accueil" class="flex items-center gap-3.5 leading-tight group">
-      <img src="logo-icc.png" alt="Logo ICC" class="w-10 h-10 object-contain rounded-xl shadow-sm" onerror="this.style.display='none'">
+      <img src="photos/logo-icc.png" alt="Logo ICC" class="w-10 h-10 object-contain rounded-xl shadow-sm" onerror="this.src='logo-icc.png'; this.onerror=null;">
       <div>
         <span class="block text-lg font-extrabold tracking-tight">ICC Saint-Étienne</span>
         <span class="block text-xs text-white/60">Impact Centre Chrétien</span>
@@ -59,7 +59,7 @@ tailwind.config = { theme: { extend: {
       <li><a class="hover:text-sage transition-colors" href="#accueil">Accueil</a></li>
       <li><a class="hover:text-sage transition-colors" href="#horaires">Horaires</a></li>
       <li><a class="hover:text-sage transition-colors" href="#evenements">Événements</a></li>
-      <li><a class="hover:text-sage transition-colors" href="#predications">Prédications</a></li>
+      <li><a class="hover:text-sage transition-colors" href="#predications">Media & Messages</a></li>
       <li><a class="hover:text-sage transition-colors" href="#avis">Avis</a></li>
       <li><a class="hover:text-sage transition-colors" href="#contact">Contact & RDV</a></li>
       <li><a href="#premiere-fois" class="bg-gold hover:bg-goldd text-navy font-bold px-5 py-2.5 rounded-full transition-colors shadow-sm">Je viens dimanche</a></li>
@@ -74,7 +74,7 @@ tailwind.config = { theme: { extend: {
       <li><a class="block py-3.5 border-b border-white/10" href="#accueil">Accueil</a></li>
       <li><a class="block py-3.5 border-b border-white/10" href="#horaires">Horaires</a></li>
       <li><a class="block py-3.5 border-b border-white/10" href="#evenements">Événements</a></li>
-      <li><a class="block py-3.5 border-b border-white/10" href="#predications">Prédications</a></li>
+      <li><a class="block py-3.5 border-b border-white/10" href="#predications">Media & Messages</a></li>
       <li><a class="block py-3.5 border-b border-white/10" href="#avis">Avis</a></li>
       <li><a class="block py-3.5 border-b border-white/10" href="#contact">Contact & RDV</a></li>
       <li><a href="#premiere-fois" class="mt-4 block text-center bg-gold text-navy font-bold px-6 py-3 rounded-full">Je viens dimanche</a></li>
@@ -163,7 +163,7 @@ tailwind.config = { theme: { extend: {
       <!-- 1. Culte Dimanche -->
       <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
         <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-          <img data-img="dimanche" loading="lazy" alt="Assemblée en louange" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <img data-img="culte_dimanche" loading="lazy" alt="Culte de célébration du dimanche" class="photo absolute inset-0 w-full h-full object-cover object-top" onerror="this.remove()">
           <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
           <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Dimanche · 9h00</span>
         </div>
@@ -179,7 +179,7 @@ tailwind.config = { theme: { extend: {
       <!-- 2. EJP Jeunes -->
       <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
         <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-          <img data-img="ejp" loading="lazy" alt="Jeunes en louange" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <img data-img="ejp_culte" loading="lazy" alt="Culte EJP Jeunes" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
           <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
           <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Dimanche · 13h00</span>
         </div>
@@ -195,7 +195,7 @@ tailwind.config = { theme: { extend: {
       <!-- 3. FIJ Jeunes -->
       <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
         <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-          <img data-img="fij" loading="lazy" alt="Jeunes réunis en groupe" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <img data-img="fij_reunion" loading="lazy" alt="Réunion FIJ des jeunes" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
           <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
           <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Mardi · 19h30</span>
         </div>
@@ -211,7 +211,7 @@ tailwind.config = { theme: { extend: {
       <!-- 4. Le Temps des Hommes -->
       <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
         <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-          <img data-img="hommes" loading="lazy" alt="Hommes rassemblés fraternellement" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <img data-img="temps_des_hommes" loading="lazy" alt="Le Temps des Hommes" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
           <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
           <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">2ᵉ mercredi du mois · 19h00</span>
         </div>
@@ -227,7 +227,7 @@ tailwind.config = { theme: { extend: {
       <!-- 5. Familles d'Impact (FI) -->
       <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
         <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-          <img data-img="fi" loading="lazy" alt="Groupe de maison en communion" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <img data-img="familles_impact" loading="lazy" alt="Familles d'Impact" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
           <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
           <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Jeudi · 19h30</span>
         </div>
@@ -243,7 +243,7 @@ tailwind.config = { theme: { extend: {
       <!-- 6. Atmosphère de Prière (ADP) -->
       <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
         <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-          <img data-img="adp" loading="lazy" alt="Temps de prière" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <img data-img="priere_adp" loading="lazy" alt="Atmosphère de Prière ADP" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
           <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
           <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Vendredi · 19h30</span>
         </div>
@@ -283,7 +283,7 @@ tailwind.config = { theme: { extend: {
   </div>
 </section>
 
-<!-- Actualités et Événements -->
+<!-- Actualités et Événements DYNAMIQUES -->
 <section id="evenements" class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-5">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
@@ -299,203 +299,120 @@ tailwind.config = { theme: { extend: {
     </div>
 
     <div class="mt-12">
-      <div id="events-future" class="grid md:grid-cols-3 gap-7">
-        
-        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between hover:border-pine hover:shadow-lg transition-all">
-          <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-            <img data-img="ev_louange" loading="lazy" alt="Soirée Louange & Témoignages" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3.5 py-1.5 rounded-xl shadow-md text-center">
-              <span class="block text-xl font-extrabold text-navy leading-tight">25</span>
-              <span class="block text-[10px] font-bold uppercase tracking-wider text-pine">Octobre</span>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-xl font-bold text-navy">Soirée Louange & Témoignages</h3>
-              <p class="mt-2 text-sm text-slate-600 leading-relaxed">Un temps prolongé d'adoration et de partage fraternel pour clore le mois ensemble.</p>
-              <p class="mt-4 text-xs font-semibold text-slate-500">19h30 · À l'église (29 rue Élisée Reclus)</p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-slate-100">
-              <span class="text-xs font-semibold text-pine">Entrée libre · Tout public</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between hover:border-pine hover:shadow-lg transition-all">
-          <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-            <img data-img="ev_ejp" loading="lazy" alt="Célébration Spéciale EJP" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3.5 py-1.5 rounded-xl shadow-md text-center">
-              <span class="block text-xl font-extrabold text-navy leading-tight">15</span>
-              <span class="block text-[10px] font-bold uppercase tracking-wider text-pine">Novembre</span>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-xl font-bold text-navy">Célébration Spéciale EJP</h3>
-              <p class="mt-2 text-sm text-slate-600 leading-relaxed">Rassemblement des jeunes d'impact : musique contemporaine, temps d'échange et collation festive.</p>
-              <p class="mt-4 text-xs font-semibold text-slate-500">13h00 · Entrée gratuite</p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-slate-100">
-              <span class="text-xs font-semibold text-pine">Réservé 15–30 ans</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between hover:border-pine hover:shadow-lg transition-all">
-          <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-            <img data-img="ev_veillee" loading="lazy" alt="Veillée de Traversée" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3.5 py-1.5 rounded-xl shadow-md text-center">
-              <span class="block text-xl font-extrabold text-navy leading-tight">31</span>
-              <span class="block text-[10px] font-bold uppercase tracking-wider text-pine">Décembre</span>
-            </div>
-          </div>
-          <div class="p-6 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="text-xl font-bold text-navy">Veillée de Traversée</h3>
-              <p class="mt-2 text-sm text-slate-600 leading-relaxed">Franchissons ensemble la nouvelle année dans la prière, l'action de grâce et la louange.</p>
-              <p class="mt-4 text-xs font-semibold text-slate-500">Dès 21h30 · À l'église</p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-slate-100">
-              <span class="text-xs font-semibold text-pine">Sur place & en direct</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <div id="events-past" class="hidden grid md:grid-cols-3 gap-7">
-        
-        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
-          <div class="p-6">
-            <span class="text-xs font-semibold text-slate-400">Septembre</span>
-            <h3 class="mt-2 text-lg font-bold text-navy">Rentrée des Familles d'Impact</h3>
-            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Reprise officielle des cellules de maison dans toute l'agglomération stéphanoise.</p>
-            <span class="mt-4 inline-block text-xs font-semibold text-slate-500">Événement terminé</span>
-          </div>
-        </article>
-
-        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
-          <div class="p-6">
-            <span class="text-xs font-semibold text-slate-400">Juin</span>
-            <h3 class="mt-2 text-lg font-bold text-navy">Baptêmes d'Immersion</h3>
-            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Une journée mémorable de célébration et de témoignages publics d'engagement de foi.</p>
-            <span class="mt-4 inline-block text-xs font-semibold text-slate-500">Événement terminé</span>
-          </div>
-        </article>
-
-        <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
-          <div class="p-6">
-            <span class="text-xs font-semibold text-slate-400">Pâques</span>
-            <h3 class="mt-2 text-lg font-bold text-navy">Culte de Résurrection</h3>
-            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Célébration spéciale suivie d'un temps de partage convivial avec nos visiteurs.</p>
-            <span class="mt-4 inline-block text-xs font-semibold text-slate-500">Événement terminé</span>
-          </div>
-        </article>
-
-      </div>
+      <!-- Génération dynamique par JS des cartes d'événements -->
+      <div id="events-future" class="grid md:grid-cols-3 gap-7"></div>
+      <div id="events-past" class="hidden grid md:grid-cols-3 gap-7"></div>
     </div>
   </div>
 </section>
 
-<!-- Cultes en direct & Replay dominical -->
-<section id="direct" class="py-24 bg-mist">
-  <div class="max-w-4xl mx-auto px-5">
-    <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Culte en direct et derniers replays</h2>
-    <p class="mt-6 text-slate-600 leading-relaxed">Vous ne pouvez pas vous déplacer ? Participez au culte en direct chaque dimanche matin ou revivez la dernière célébration dominicale diffusée sur ICC TV.</p>
-    
-    <div id="videoBox" class="mt-10 relative aspect-video rounded-2xl overflow-hidden bg-navy shadow-xl group cursor-pointer border-b-4 border-pine">
-      <img id="videoThumb" alt="Dernier live ou replay de culte dominical ICC TV" class="hidden absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-      <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/60 to-forest/30 group-hover:via-forest/40 transition-colors"></div>
-      
-      <div id="videoCoverContent" class="absolute inset-0 grid place-items-center text-center text-white p-6">
-        <div class="max-w-2xl px-4">
-          <button id="playBtn" class="mx-auto grid place-items-center w-20 h-20 rounded-full bg-gold hover:bg-goldd text-navy transition-all shadow-xl hover:scale-110 active:scale-95" aria-label="Lancer la vidéo du culte">
-            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-          </button>
-          <p id="videoTitle" class="mt-3 font-bold text-xl sm:text-2xl line-clamp-2">Chargement du culte dominical...</p>
-          <p id="videoHint" class="text-sm text-white/80 mt-2 font-medium">Appuyez pour lancer la célébration</p>
-        </div>
-      </div>
-    </div>
-
-    <a data-social="youtube" target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV/streams" class="mt-6 inline-flex items-center gap-2 font-semibold text-navy border-b-2 border-pine pb-0.5 hover:text-pine transition-colors">
-      Tous les replays et cultes en direct sur YouTube (@ICCTV) →
-    </a>
-  </div>
-</section>
-
-<!-- Prédications & Temps forts avec les 3 vraies vidéos YouTube -->
-<section id="predications" class="py-24 bg-white border-t border-slate-100">
+<!-- SECTION COMBINÉE : DIRECT, REPLAYS & PRÉDICATIONS -->
+<section id="predications" class="py-20 bg-mist border-t border-slate-100">
   <div class="max-w-6xl mx-auto px-5">
+    
+    <!-- En-tête unique -->
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
       <div>
-        <p class="text-xs font-bold uppercase tracking-wider text-pine font-medium">Prédications & Temps forts</p>
-        <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Les messages de Saint-Étienne</h2>
-        <p class="mt-6 text-slate-600 max-w-xl leading-relaxed">Retrouvez les enseignements et moments forts récents avec leurs vidéos complètes.</p>
+        <p class="text-xs font-bold uppercase tracking-wider text-pine font-medium">Médias & Messages</p>
+        <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Cultes, Directs & Prédications</h2>
+        <p class="mt-4 text-slate-600 max-w-2xl leading-relaxed">Suivez nos célébrations dominicales en direct ou retrouvez les derniers enseignements et temps forts d'ICC Saint-Étienne.</p>
       </div>
-      <a target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV" class="text-sm font-bold text-navy hover:text-pine transition-colors inline-flex items-center gap-1 self-start md:self-auto">
-        Voir plus de vidéos sur YouTube →
+      <a target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV/streams" class="text-sm font-bold text-navy hover:text-pine transition-colors inline-flex items-center gap-1.5 self-start md:self-auto bg-white px-4 py-2.5 rounded-full border border-slate-200 shadow-sm">
+        <span>Chaîne YouTube ICCTV</span>
+        <span>→</span>
       </a>
     </div>
 
-    <div class="mt-12 grid md:grid-cols-3 gap-7">
+    <!-- Grille combinée -->
+    <div class="mt-10 grid lg:grid-cols-12 gap-8 items-start">
       
-      <!-- Carte Vidéo 1 : Ps Alexandre AMAZOU -->
-      <article class="bg-mist rounded-2xl overflow-hidden border border-slate-200 flex flex-col hover:border-pine transition-colors">
-        <div class="local-video-box relative aspect-video bg-navy border-b-4 border-pine overflow-hidden cursor-pointer group" data-vindex="0">
-          <img class="local-thumb absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://img.youtube.com/vi/GgfC4MCtx9k/hqdefault.jpg" alt="Dieu se rassemble des Hommes">
-          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent flex items-center justify-center">
-            <span class="w-12 h-12 rounded-full bg-white/90 text-navy flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </span>
-          </div>
-          <span class="absolute bottom-3 right-3 bg-black/70 text-white text-[11px] font-semibold px-2 py-0.5 rounded">Campus Saint-Étienne</span>
+      <!-- Côté Gauche : Culte Dominical en Direct / Replay Principal (Largeur 7/12) -->
+      <div class="lg:col-span-7 bg-white rounded-2xl p-5 border border-slate-200 shadow-sm flex flex-col justify-between">
+        <div class="flex items-center justify-between mb-3">
+          <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-pine bg-tint px-3 py-1 rounded-full">
+            <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
+            Dernier Culte Dominical
+          </span>
+          <span class="text-xs text-slate-400 font-medium">Direct & Replay</span>
         </div>
-        <div class="p-6">
-          <span class="text-xs font-semibold text-pine">Enseignement</span>
-          <h3 class="local-title mt-1 text-lg font-bold text-navy line-clamp-2">Dieu se rassemble des Hommes - Ps Alexandre AMAZOU</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Prédication et enseignement dominical sur le mandat divin et l'édification de l'Église.</p>
-        </div>
-      </article>
 
-      <!-- Carte Vidéo 2 : Samuel EBOUMBOU (EJP) -->
-      <article class="bg-mist rounded-2xl overflow-hidden border border-slate-200 flex flex-col hover:border-pine transition-colors">
-        <div class="local-video-box relative aspect-video bg-navy border-b-4 border-pine overflow-hidden cursor-pointer group" data-vindex="1">
-          <img class="local-thumb absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://img.youtube.com/vi/F7eonbizjM4/hqdefault.jpg" alt="TRAVAILLE AVEC DIEU À TA PROPRE CONSTRUCTION">
-          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent flex items-center justify-center">
-            <span class="w-12 h-12 rounded-full bg-white/90 text-navy flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </span>
+        <div id="videoBox" class="relative aspect-video rounded-xl overflow-hidden bg-navy shadow-md group cursor-pointer border-b-4 border-pine">
+          <img id="videoThumb" alt="Culte dominical ICC TV" class="hidden absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/50 to-forest/20 group-hover:via-forest/40 transition-colors"></div>
+          
+          <div id="videoCoverContent" class="absolute inset-0 grid place-items-center text-center text-white p-6">
+            <div class="max-w-md px-2">
+              <button id="playBtn" class="mx-auto grid place-items-center w-16 h-16 rounded-full bg-gold hover:bg-goldd text-navy transition-all shadow-xl hover:scale-110 active:scale-95" aria-label="Lancer la vidéo du culte">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <p id="videoTitle" class="mt-3 font-bold text-lg sm:text-xl line-clamp-2">Chargement du culte...</p>
+              <p id="videoHint" class="text-xs text-white/80 mt-1 font-medium">Cliquer pour lancer la vidéo</p>
+            </div>
           </div>
-          <span class="absolute bottom-3 right-3 bg-black/70 text-white text-[11px] font-semibold px-2 py-0.5 rounded">EJP Saint-Étienne</span>
         </div>
-        <div class="p-6">
-          <span class="text-xs font-semibold text-pine">Jeunes</span>
-          <h3 class="local-title mt-1 text-lg font-bold text-navy line-clamp-2">TRAVAILLE AVEC DIEU À TA PROPRE CONSTRUCTION - Samuel EBOUMBOU</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Exhortation puissante lors du rassemblement des jeunes du dimanche après-midi.</p>
-        </div>
-      </article>
 
-      <!-- Carte Vidéo 3 : Clôture 24h de prières (ADP) -->
-      <article class="bg-mist rounded-2xl overflow-hidden border border-slate-200 flex flex-col hover:border-pine transition-colors">
-        <div class="local-video-box relative aspect-video bg-navy border-b-4 border-pine overflow-hidden cursor-pointer group" data-vindex="2">
-          <img class="local-thumb absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://img.youtube.com/vi/Huk1okUJh6U/hqdefault.jpg" alt="Clôture - 24h non-stop de prières">
-          <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent flex items-center justify-center">
-            <span class="w-12 h-12 rounded-full bg-white/90 text-navy flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            </span>
+        <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+          <span>Diffusion officielle ICC TV</span>
+          <a data-social="youtube" target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV/streams" class="font-semibold text-navy hover:text-pine underline">Voir tous les directs →</a>
+        </div>
+      </div>
+
+      <!-- Côté Droit : Les 3 Prédications Récentes (Largeur 5/12) -->
+      <div class="lg:col-span-5 flex flex-col gap-4">
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1">Prédications & Témoignages récents</p>
+
+        <!-- Vidéo 1 -->
+        <article class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm flex gap-4 items-center hover:border-pine transition-colors">
+          <div class="local-video-box relative w-32 aspect-video shrink-0 bg-navy rounded-lg overflow-hidden cursor-pointer group" data-vindex="0">
+            <img class="local-thumb absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-105" src="https://img.youtube.com/vi/GgfC4MCtx9k/hqdefault.jpg" alt="Dieu se rassemble des Hommes">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-white/90 text-navy flex items-center justify-center shadow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </div>
           </div>
-          <span class="absolute bottom-3 right-3 bg-black/70 text-white text-[11px] font-semibold px-2 py-0.5 rounded">Atmosphère de Prière</span>
-        </div>
-        <div class="p-6">
-          <span class="text-xs font-semibold text-pine">Intercession</span>
-          <h3 class="local-title mt-1 text-lg font-bold text-navy line-clamp-2">Clôture - 24h non-stop de prières</h3>
-          <p class="mt-2 text-sm text-slate-600 leading-relaxed">Grand temps d'intercession et d'adoration communautaire dans la présence de Dieu.</p>
-        </div>
-      </article>
+          <div class="flex-1 min-w-0">
+            <span class="text-[10px] font-bold uppercase text-pine">Enseignement</span>
+            <h3 class="local-title text-sm font-bold text-navy line-clamp-2 leading-snug">Dieu se rassemble des Hommes</h3>
+            <p class="text-xs text-slate-500 mt-1">Ps Alexandre AMAZOU</p>
+          </div>
+        </article>
+
+        <!-- Vidéo 2 -->
+        <article class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm flex gap-4 items-center hover:border-pine transition-colors">
+          <div class="local-video-box relative w-32 aspect-video shrink-0 bg-navy rounded-lg overflow-hidden cursor-pointer group" data-vindex="1">
+            <img class="local-thumb absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-105" src="https://img.youtube.com/vi/F7eonbizjM4/hqdefault.jpg" alt="TRAVAILLE AVEC DIEU">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-white/90 text-navy flex items-center justify-center shadow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </div>
+          </div>
+          <div class="flex-1 min-w-0">
+            <span class="text-[10px] font-bold uppercase text-pine">Jeunes (EJP)</span>
+            <h3 class="local-title text-sm font-bold text-navy line-clamp-2 leading-snug">Travailler à sa propre construction</h3>
+            <p class="text-xs text-slate-500 mt-1">Samuel EBOUMBOU</p>
+          </div>
+        </article>
+
+        <!-- Vidéo 3 -->
+        <article class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm flex gap-4 items-center hover:border-pine transition-colors">
+          <div class="local-video-box relative w-32 aspect-video shrink-0 bg-navy rounded-lg overflow-hidden cursor-pointer group" data-vindex="2">
+            <img class="local-thumb absolute inset-0 w-full h-full object-cover transition-transform group-hover:scale-105" src="https://img.youtube.com/vi/Huk1okUJh6U/hqdefault.jpg" alt="Clôture 24h de prières">
+            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <span class="w-8 h-8 rounded-full bg-white/90 text-navy flex items-center justify-center shadow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </div>
+          </div>
+          <div class="flex-1 min-w-0">
+            <span class="text-[10px] font-bold uppercase text-pine">Prière (ADP)</span>
+            <h3 class="local-title text-sm font-bold text-navy line-clamp-2 leading-snug">Clôture - 24h non-stop de prières</h3>
+            <p class="text-xs text-slate-500 mt-1">Atmosphère de Prière</p>
+          </div>
+        </article>
+
+      </div>
 
     </div>
   </div>
@@ -715,7 +632,7 @@ tailwind.config = { theme: { extend: {
   <div class="max-w-6xl mx-auto px-5 py-16 grid gap-10 md:grid-cols-4">
     <div>
       <div class="flex items-center gap-3">
-        <img src="logo-icc.png" alt="Logo ICC" class="w-9 h-9 object-contain rounded-lg" onerror="this.style.display='none'">
+        <img src="photos/logo-icc.png" alt="Logo ICC" class="w-9 h-9 object-contain rounded-lg" onerror="this.src='logo-icc.png'; this.onerror=null;">
         <div>
           <p class="text-xl font-extrabold">ICC Saint-Étienne</p>
           <p class="text-white/60 text-xs">Impact Centre Chrétien</p>
@@ -763,30 +680,152 @@ tailwind.config = { theme: { extend: {
 </footer>
 
 <script>
-  // ==== GESTION DES PHOTOS ====
-  const U = id => 'https://unsplash.com/photos/' + id + '/download?force=true&w=1600';
+  // ==== GESTION DES PHOTOS LOCALES ====
   const IMG = {
-    hero:       U('nNTW7lsCzDQ'),
-    dimanche:   U('M1ZUtHSWXHI'),
-    ejp:        U('zPuyJ-YPfiQ'),
-    fij:        U('OuqUqju4R7Y'),
-    hommes:     U('wD1LRb9OeEo'),
-    fi:         U('OuqUqju4R7Y'),
-    adp:        U('c9Crjhps598'),
-    ev_louange: U('M1ZUtHSWXHI'),
-    ev_ejp:     U('zPuyJ-YPfiQ'),
-    ev_veillee: U('OuqUqju4R7Y')
+    hero:             'photos/hero.jpg',
+    culte_dimanche:   'photos/culte_dimanche.jpg',
+    ejp_culte:        'photos/ejp_culte.jpg',
+    fij_reunion:      'photos/fij_reunion.jpg',
+    temps_des_hommes: 'photos/temps_des_hommes.jpg',
+    familles_impact:  'photos/familles_impact.jpg',
+    priere_adp:       'photos/priere_adp.jpg',
+    ev_louange:       'photos/ev_louange.jpg',
+    ev_ejp:           'photos/ev_ejp.jpg',
+    ev_veillee:       'photos/ev_veillee.jpg'
   };
 
-  // ==== CONFIGURATION LIENS & RÉSEAUX ====
+  const FALLBACK = {
+    hero:             'https://unsplash.com/photos/nNTW7lsCzDQ/download?force=true&w=1600',
+    culte_dimanche:   'https://unsplash.com/photos/M1ZUtHSWXHI/download?force=true&w=1600',
+    ejp_culte:        'https://unsplash.com/photos/zPuyJ-YPfiQ/download?force=true&w=1600',
+    fij_reunion:      'https://unsplash.com/photos/OuqUqju4R7Y/download?force=true&w=1600',
+    temps_des_hommes: 'https://unsplash.com/photos/wD1LRb9OeEo/download?force=true&w=1600',
+    familles_impact:  'https://unsplash.com/photos/OuqUqju4R7Y/download?force=true&w=1600',
+    priere_adp:       'https://unsplash.com/photos/c9Crjhps598/download?force=true&w=1600',
+    ev_louange:       'https://unsplash.com/photos/M1ZUtHSWXHI/download?force=true&w=1600',
+    ev_ejp:           'https://unsplash.com/photos/zPuyJ-YPfiQ/download?force=true&w=1600',
+    ev_veillee:       'https://unsplash.com/photos/OuqUqju4R7Y/download?force=true&w=1600'
+  };
+
+  // ==== TABLEAU DES ÉVÉNEMENTS DYNAMIQUES ====
+  // Modifie simplement les valeurs ci-dessous pour changer la liste des événements
+  const EVENTS = [
+    // --- À VENIR ---
+    {
+      type: 'future',
+      jour: '25',
+      mois: 'Octobre',
+      titre: 'Soirée Louange & Témoignages',
+      description: "Un temps prolongé d'adoration et de partage fraternel pour clore le mois ensemble.",
+      horaire: "19h30 · À l'église (29 rue Élisée Reclus)",
+      infoBadge: 'Entrée libre · Tout public',
+      imageKey: 'ev_louange'
+    },
+    {
+      type: 'future',
+      jour: '15',
+      mois: 'Novembre',
+      titre: 'Célébration Spéciale EJP',
+      description: "Rassemblement des jeunes d'impact : musique contemporaine, temps d'échange et collation festive.",
+      horaire: '13h00 · Entrée gratuite',
+      infoBadge: 'Réservé 15–30 ans',
+      imageKey: 'ev_ejp'
+    },
+    {
+      type: 'future',
+      jour: '31',
+      mois: 'Décembre',
+      titre: 'Veillée de Traversée',
+      description: "Franchissons ensemble la nouvelle année dans la prière, l'action de grâce et la louange.",
+      horaire: "Dès 21h30 · À l'église",
+      infoBadge: 'Sur place & en direct',
+      imageKey: 'ev_veillee'
+    },
+
+    // --- PASSÉS ---
+    {
+      type: 'past',
+      mois: 'Septembre',
+      titre: "Rentrée des Familles d'Impact",
+      description: "Reprise officielle des cellules de maison dans toute l'agglomération stéphanoise."
+    },
+    {
+      type: 'past',
+      mois: 'Juin',
+      titre: "Baptêmes d'Immersion",
+      description: "Une journée mémorable de célébration et de témoignages publics d'engagement de foi."
+    },
+    {
+      type: 'past',
+      mois: 'Pâques',
+      titre: "Culte de Résurrection",
+      description: "Célébration spéciale suivie d'un temps de partage convivial avec nos visiteurs."
+    }
+  ];
+
+  // GESTIONNAIRE D'AFFICHAGE DES ÉVÉNEMENTS
+  function renderEvents() {
+    const futureContainer = document.getElementById('events-future');
+    const pastContainer = document.getElementById('events-past');
+
+    if (!futureContainer || !pastContainer) return;
+
+    futureContainer.innerHTML = '';
+    pastContainer.innerHTML = '';
+
+    EVENTS.forEach(ev => {
+      if (ev.type === 'future') {
+        const imgSrc = IMG[ev.imageKey] || FALLBACK[ev.imageKey] || '';
+        const fallbackSrc = FALLBACK[ev.imageKey] || '';
+
+        futureContainer.innerHTML += `
+          <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between hover:border-pine hover:shadow-lg transition-all">
+            <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
+              <img src="${imgSrc}" loading="lazy" alt="${ev.titre}" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.src='${fallbackSrc}'; this.onerror=null;">
+              <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
+              <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3.5 py-1.5 rounded-xl shadow-md text-center">
+                <span class="block text-xl font-extrabold text-navy leading-tight">${ev.jour}</span>
+                <span class="block text-[10px] font-bold uppercase tracking-wider text-pine">${ev.mois}</span>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-navy">${ev.titre}</h3>
+                <p class="mt-2 text-sm text-slate-600 leading-relaxed">${ev.description}</p>
+                <p class="mt-4 text-xs font-semibold text-slate-500">${ev.horaire}</p>
+              </div>
+              <div class="mt-6 pt-4 border-t border-slate-100">
+                <span class="text-xs font-semibold text-pine">${ev.infoBadge}</span>
+              </div>
+            </div>
+          </article>
+        `;
+      } else {
+        pastContainer.innerHTML += `
+          <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col">
+            <div class="p-6">
+              <span class="text-xs font-semibold text-slate-400">${ev.mois}</span>
+              <h3 class="mt-2 text-lg font-bold text-navy">${ev.titre}</h3>
+              <p class="mt-2 text-sm text-slate-600 leading-relaxed">${ev.description}</p>
+              <span class="mt-4 inline-block text-xs font-semibold text-slate-500">Événement terminé</span>
+            </div>
+          </article>
+        `;
+      }
+    });
+  }
+
+  renderEvents();
+
+  // ==== CONFIGURATION DIVERSES & RESEAUX ====
   const CONFIG = {
     youtubeChannelId: "UCAIUeduIUX1E6sTIoW-vbUQ",
     youtubeVideoId: "",
     youtubeStreams: "https://www.youtube.com/@ICCTV/streams",
     localVideoIds: [
-      "GgfC4MCtx9k", // 1. Dieu se rassemble des Hommes - Ps Alexandre AMAZOU
-      "F7eonbizjM4", // 2. TRAVAILLE AVEC DIEU À TA PROPRE CONSTRUCTION - Samuel EBOUMBOU
-      "Huk1okUJh6U"  // 3. Clôture - 24h non-stop de prières
+      "GgfC4MCtx9k",
+      "F7eonbizjM4",
+      "Huk1okUJh6U"
     ],
     facebook: "https://www.facebook.com/p/Impact-Centre-Chr%C3%A9tien-%C3%89glise-de-Saint-%C3%89tienne-100071847546439/?locale=fr_FR",
     instagram: "https://www.instagram.com/iccsaintetienne/?hl=fr",
@@ -795,12 +834,24 @@ tailwind.config = { theme: { extend: {
   };
   const EMAIL = "iccsaintetienne@gmail.com";
 
-  // Injection des photos
-  document.querySelectorAll('[data-img]').forEach(i => { if (IMG[i.dataset.img]) i.src = IMG[i.dataset.img]; });
+  // Attribution des photos locales
+  document.querySelectorAll('[data-img]').forEach(img => {
+    const key = img.dataset.img;
+    if (IMG[key]) {
+      img.src = IMG[key];
+      img.onerror = () => {
+        if (FALLBACK[key]) {
+          img.src = FALLBACK[key];
+          img.onerror = null;
+        }
+      };
+    }
+  });
+
   document.getElementById('year').textContent = new Date().getFullYear();
-  document.querySelectorAll('[data-social]').forEach(a => {
+  document.querySelectorAll('[data-social]').forEach(a => { 
     if (a.dataset.social === 'youtube') a.href = CONFIG.youtubeStreams;
-    else if (CONFIG[a.dataset.social]) a.href = CONFIG[a.dataset.social];
+    else if (CONFIG[a.dataset.social]) a.href = CONFIG[a.dataset.social]; 
   });
   if (CONFIG.googleReviews) {
     const b1 = document.getElementById('btnAvisMap');
@@ -812,7 +863,7 @@ tailwind.config = { theme: { extend: {
   }
   if (CONFIG.donation) { const d = document.getElementById('donBtn'); d.href = CONFIG.donation; d.target = '_blank'; d.rel = 'noopener'; }
 
-  // ==== DÉTECTION DU CULTE DU DIMANCHE (LIVE YOUTUBE) ====
+  // ==== CULTE EN DIRECT (LIVE YOUTUBE) ====
   const videoBox = document.getElementById('videoBox');
   const videoThumb = document.getElementById('videoThumb');
   const videoTitle = document.getElementById('videoTitle');
@@ -874,7 +925,7 @@ tailwind.config = { theme: { extend: {
     }
   });
 
-  // ==== GESTION DES 3 VIDÉOS LOCALES ====
+  // ==== PRÉDICATIONS RÉCENTES ====
   function initLocalVideos() {
     const boxes = document.querySelectorAll('.local-video-box');
     boxes.forEach(box => {
@@ -926,32 +977,32 @@ tailwind.config = { theme: { extend: {
     });
   });
 
-  // Formulaire interactif à 3 options
+  // Formulaire interactif
   const tabs = document.querySelectorAll('.tab'), form = document.getElementById('form'), confirmBox = document.getElementById('confirm');
   const typeNote = document.getElementById('typeNote');
   let type = 'question';
 
   const TEXTS = {
-    question: {
-      label: 'Votre question',
-      send: 'Envoyer ma question',
-      note: '',
-      title: 'Merci, votre question est prête.',
-      body: 'Nous vous répondrons avec joie dans les meilleurs délais.'
+    question: { 
+      label: 'Votre question', 
+      send: 'Envoyer ma question', 
+      note: '', 
+      title: 'Merci, votre question est prête.', 
+      body: 'Nous vous répondrons avec joie dans les meilleurs délais.' 
     },
-    priere: {
-      label: 'Votre sujet de prière',
-      send: 'Envoyer ma demande de prière',
-      note: 'Votre sujet de prière est strictement confidentiel et porté par notre équipe d’intercession.',
-      title: 'Votre demande de prière est prête.',
-      body: 'Nous prions avec foi pour votre situation.'
+    priere: { 
+      label: 'Votre sujet de prière', 
+      send: 'Envoyer ma demande de prière', 
+      note: 'Votre sujet de prière est strictement confidentiel et porté par notre équipe d’intercession.', 
+      title: 'Votre demande de prière est prête.', 
+      body: 'Nous prions avec foi pour votre situation.' 
     },
-    rdv: {
-      label: 'Précisez l’objet de votre demande de rendez-vous',
-      send: 'Demander un rendez-vous pastoral',
-      note: 'Pour un entretien avec le pasteur ou un membre du conseil, laissez votre numéro afin que nous puissions convenir d’un créneau.',
-      title: 'Demande de rendez-vous enregistrée.',
-      body: 'Le berger ou un membre du conseil prendra contact avec vous rapidement pour convenir d’un échange.'
+    rdv: { 
+      label: 'Précisez l’objet de votre demande de rendez-vous', 
+      send: 'Demander un rendez-vous pastoral', 
+      note: 'Pour un entretien avec le pasteur ou un membre du conseil, laissez votre numéro afin que nous puissions convenir d’un créneau.', 
+      title: 'Demande de rendez-vous enregistrée.', 
+      body: 'Le berger ou un membre du conseil prendra contact avec vous rapidement pour convenir d’un échange.' 
     }
   };
 
@@ -975,14 +1026,14 @@ tailwind.config = { theme: { extend: {
     const okMail = !email.value.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
     const checks = [!!nom.value.trim(), okMail, !!msg.value.trim()];
     
-    [nom, email, msg].forEach((f, i) => {
-      errs[i].classList.toggle('hidden', checks[i]);
-      f.setAttribute('aria-invalid', !checks[i]);
+    [nom, email, msg].forEach((f, i) => { 
+      errs[i].classList.toggle('hidden', checks[i]); 
+      f.setAttribute('aria-invalid', !checks[i]); 
     });
 
-    if (!checks.every(Boolean)) {
-      [nom, email, msg][checks.indexOf(false)].focus();
-      return;
+    if (!checks.every(Boolean)) { 
+      [nom, email, msg][checks.indexOf(false)].focus(); 
+      return; 
     }
 
     const c = TEXTS[type];
@@ -994,15 +1045,15 @@ tailwind.config = { theme: { extend: {
     document.getElementById('confirmText').textContent = c.body;
     document.getElementById('mailLink').href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
-    form.classList.add('hidden');
-    confirmBox.classList.remove('hidden');
+    form.classList.add('hidden'); 
+    confirmBox.classList.remove('hidden'); 
     confirmBox.focus();
   });
 
   document.getElementById('again').addEventListener('click', () => {
-    form.reset();
-    confirmBox.classList.add('hidden');
-    form.classList.remove('hidden');
+    form.reset(); 
+    confirmBox.classList.add('hidden'); 
+    form.classList.remove('hidden'); 
     form.nom.focus();
   });
 </script>

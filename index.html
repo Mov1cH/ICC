@@ -26,6 +26,9 @@ tailwind.config = { theme: { extend: {
   }
 }}};
 </script>
+<!-- CSS & JS Widget Calendly -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <style>
   :root { box-sizing: border-box; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
   html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
@@ -99,7 +102,7 @@ tailwind.config = { theme: { extend: {
       <p class="mt-6 text-lg text-white/85 leading-relaxed max-w-xl">Construire des hommes et des femmes qui inspirent et influencent positivement leur environnement pour la gloire de Dieu et pour l'avancement de l'humanité.</p>
       <div class="mt-10 flex flex-wrap gap-4">
         <a href="#premiere-fois" class="bg-gold hover:bg-goldd text-navy font-bold px-8 py-4 rounded-full transition-colors shadow-lg">Préparer ma visite</a>
-        <a href="#horaires" class="border border-white/50 hover:bg-white hover:text-navy font-semibold px-8 py-4 rounded-full transition-colors">Nos horaires</a>
+        <a href="#horaires" class="border border-white/50 hover:bg-white hover:text-navy font-semibold px-8 py-4 rounded-full transition-colors">Nos Rendez-vous de la semaine</a>
       </div>
     </div>
   </div>
@@ -185,7 +188,7 @@ tailwind.config = { theme: { extend: {
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div>
-            <h3 class="text-xl font-bold text-navy">EJP (Jeunes Prodiges)</h3>
+            <h3 class="text-xl font-bold text-navy">EJP: Jeunes Prodiges</h3>
             <p class="mt-2 text-slate-600 text-sm leading-relaxed">Culte conçu par et pour les jeunes : louange contemporaine, messages adaptés et ambiance fraternelle.</p>
           </div>
           <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église · Jeunes</p>
@@ -201,7 +204,7 @@ tailwind.config = { theme: { extend: {
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div>
-            <h3 class="text-xl font-bold text-navy">FIJ (Familles d'Impact Jeunes)</h3>
+            <h3 class="text-xl font-bold text-navy">FIJ: Familles d'Impact Jeunes</h3>
             <p class="mt-2 text-slate-600 text-sm leading-relaxed">Les maisonnées des jeunes chaque mardi soir. Des temps d'édification, de prière et de communion entre jeunes.</p>
           </div>
           <p class="mt-4 text-xs font-semibold text-pine pt-3 border-t border-slate-100 font-medium">Tous les mardis soir · Jeunes</p>
@@ -227,13 +230,13 @@ tailwind.config = { theme: { extend: {
       <!-- 5. Familles d'Impact (FI) -->
       <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
         <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-          <img data-img="familles_impact" loading="lazy" alt="Familles d'Impact" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
+          <img data-img="familles_impact" loading="lazy" alt="Familles d'Impact" class="photo absolute inset-0 w-full h-full object-cover object-top" onerror="this.remove()">
           <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
           <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Jeudi · 19h30</span>
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div>
-            <h3 class="text-xl font-bold text-navy">Familles d'Impact (FI)</h3>
+            <h3 class="text-xl font-bold text-navy">FI: Familles d'Impact</h3>
             <p class="mt-2 text-slate-600 text-sm leading-relaxed">Cellules de maison réparties dans l'agglomération stéphanoise pour approfondir les enseignements et s'entraider.</p>
           </div>
           <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">En petits groupes de maison</p>
@@ -249,7 +252,7 @@ tailwind.config = { theme: { extend: {
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div>
-            <h3 class="text-xl font-bold text-navy">Atmosphère de Prière (ADP)</h3>
+            <h3 class="text-xl font-bold text-navy">ADP: Atmosphère de Prière</h3>
             <p class="mt-2 text-slate-600 text-sm leading-relaxed">Grand rassemblement de prière et d'intercession à l'église pour rechercher la présence divine et renouveler ses forces.</p>
           </div>
           <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église · Tout public</p>
@@ -435,10 +438,42 @@ tailwind.config = { theme: { extend: {
         Votre générosité soutient l'accueil des personnes, les programmes pour les enfants, les jeunes, ainsi que l'ensemble des actions menées à Saint-Étienne.
       </p>
     </div>
-    <div class="md:col-span-2 bg-white rounded-2xl p-8 text-center shadow-sm border border-slate-200 border-t-4 border-t-pine">
-      <p class="font-bold text-navy text-lg">Donner à ICC Saint-Étienne</p>
-      <p class="mt-2 text-xs text-slate-500">Chaque don compte et reste un geste libre et personnel.</p>
-      <a id="donBtn" href="mailto:iccsaintetienne@gmail.com?subject=Don%20ICC%20Saint-%C3%89tienne" class="mt-5 block bg-gold hover:bg-goldd text-navy font-bold px-6 py-3.5 rounded-full transition-colors shadow-sm">Faire un don</a>
+
+    <!-- Carte RIB pour Virement Bancaire -->
+    <div class="md:col-span-2 bg-white rounded-2xl p-6 shadow-sm border border-slate-200 border-t-4 border-t-pine">
+      <div class="flex items-center justify-between mb-4">
+        <p class="font-bold text-navy text-lg">Faire un don par virement</p>
+        <span class="text-[10px] font-bold uppercase tracking-wider bg-tint text-pine px-2.5 py-1 rounded-md">RIB Officiel</span>
+      </div>
+      
+      <p class="text-xs text-slate-500 mb-4">Titulaire : <strong class="text-navy">IMPACT CENTRE CHRETIEN SAINT-ETIENNE</strong></p>
+
+      <div class="space-y-3 bg-mist p-4 rounded-xl border border-slate-200 text-xs">
+        <div>
+          <span class="block text-slate-400 font-medium text-[11px]">IBAN</span>
+          <div class="flex items-center justify-between gap-2 mt-0.5">
+            <span id="ibanVal" class="font-mono font-bold text-navy text-sm tracking-wide break-all">FR37 3000 2048 6500 0007 4641 B16</span>
+            <button type="button" onclick="copyRIB('FR3730002048650000074641B16', this)" class="shrink-0 bg-white border border-slate-300 hover:border-pine text-navy font-semibold px-2.5 py-1 rounded-lg transition-colors text-[11px] shadow-sm">
+              Copier
+            </button>
+          </div>
+        </div>
+
+        <div class="pt-2 border-t border-slate-200/80 grid grid-cols-2 gap-2">
+          <div>
+            <span class="block text-slate-400 font-medium text-[11px]">Code BIC / SWIFT</span>
+            <span class="font-mono font-bold text-navy mt-0.5 block">CRLYFRPP</span>
+          </div>
+          <div>
+            <span class="block text-slate-400 font-medium text-[11px]">Banque</span>
+            <span class="font-semibold text-navy mt-0.5 block">LCL (Paris Opéra)</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-4 text-[11px] text-slate-500 text-center">
+        Un reçu fiscal peut vous être délivré sur demande par e-mail.
+      </p>
     </div>
   </div>
 </section>
@@ -579,32 +614,34 @@ tailwind.config = { theme: { extend: {
     <div role="tablist" aria-label="Type de message" class="mt-8 flex flex-wrap gap-2 p-1.5 rounded-2xl bg-fog">
       <button role="tab" id="tab-q" aria-selected="true" aria-controls="form" data-type="question" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">Question</button>
       <button role="tab" id="tab-p" aria-selected="false" aria-controls="form" data-type="priere" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">Sujet de prière</button>
-      <button role="tab" id="tab-rdv" aria-selected="false" aria-controls="form" data-type="rdv" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">RDV pastoral / Conseil</button>
+      <button role="tab" id="tab-rdv" aria-selected="false" aria-controls="calendlyContainer" data-type="rdv" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">RDV pastoral / Conseil</button>
     </div>
 
+    <!-- Formulaire classique pour Question & Prière -->
     <form id="form" role="tabpanel" class="mt-6 space-y-5" novalidate>
       <p id="typeNote" class="hidden rounded-xl bg-tint border-l-4 border-pine text-navy text-sm p-4 shadow-sm"></p>
       
       <div class="grid sm:grid-cols-2 gap-5">
         <div>
-          <label for="nom" class="block text-sm font-semibold text-navy mb-1">Prénom & Nom</label>
+          <label for="nom" class="block text-sm font-semibold text-navy mb-1">Prénom & Nom *</label>
           <input id="nom" name="nom" autocomplete="given-name" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-pine">
           <p class="err hidden text-sm text-red-700 mt-1">Indiquez votre nom.</p>
         </div>
         <div>
-          <label for="tel" class="block text-sm font-semibold text-navy mb-1">Téléphone <span id="telOpt" class="font-normal text-slate-500">(recommandé pour RDV)</span></label>
-          <input id="tel" name="tel" type="tel" autocomplete="tel" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-pine">
+          <label for="tel" class="block text-sm font-semibold text-navy mb-1">Téléphone *</label>
+          <input id="tel" name="tel" type="tel" autocomplete="tel" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-pine">
+          <p class="err hidden text-sm text-red-700 mt-1">Indiquez un numéro de téléphone valide.</p>
         </div>
       </div>
 
       <div>
-        <label for="email" class="block text-sm font-semibold text-navy mb-1">E-mail <span class="font-normal text-slate-500">(facultatif)</span></label>
-        <input id="email" name="email" type="email" autocomplete="email" class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-pine">
+        <label for="email" class="block text-sm font-semibold text-navy mb-1">E-mail *</label>
+        <input id="email" name="email" type="email" autocomplete="email" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-pine">
         <p class="err hidden text-sm text-red-700 mt-1">Saisissez une adresse e-mail valide.</p>
       </div>
 
       <div>
-        <label for="msg" id="msgLabel" class="block text-sm font-semibold text-navy mb-1">Votre message</label>
+        <label for="msg" id="msgLabel" class="block text-sm font-semibold text-navy mb-1">Votre message *</label>
         <textarea id="msg" name="msg" rows="5" required class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-pine"></textarea>
         <p class="err hidden text-sm text-red-700 mt-1">Écrivez quelques mots avant d'envoyer.</p>
       </div>
@@ -613,6 +650,17 @@ tailwind.config = { theme: { extend: {
         Envoyer ma question
       </button>
     </form>
+
+    <!-- Calendrier embarqué Calendly pour RDV pastoral -->
+    <div id="calendlyContainer" class="hidden mt-6 bg-white rounded-2xl p-2 shadow-sm border border-slate-200">
+      <div class="p-4 bg-tint border-l-4 border-pine rounded-xl mb-4">
+        <p class="font-bold text-navy text-sm">Prise de rendez-vous en ligne</p>
+        <p class="text-xs text-slate-600 mt-1">Sélectionnez une date et un créneau ci-dessous pour réserver directement votre entretien pastoral dans l'agenda de l'église.</p>
+      </div>
+      <div class="calendly-inline-widget w-full rounded-xl overflow-hidden" 
+           data-url="https://calendly.com/rdvberger-icc-saintetienne/nouvelle-reunion" 
+           style="min-width:320px;height:680px;"></div>
+    </div>
 
     <div id="confirm" class="hidden mt-6 rounded-2xl bg-tint border-l-4 border-pine p-6 shadow-sm" role="status" aria-live="polite" tabindex="-1">
       <p id="confirmTitle" class="font-bold text-navy text-lg"></p>
@@ -673,7 +721,7 @@ tailwind.config = { theme: { extend: {
     <div>
       <p class="font-bold text-sage">Contact & Pasteur</p>
       <p class="mt-3 text-sm text-white/70">Besoin d'un rendez-vous ou d'un conseil ?</p>
-      <a href="mailto:iccsaintetienne@gmail.com" class="mt-2 inline-block text-sm text-white/85 hover:text-sage break-all">iccsaintetienne@gmail.com</a>
+      <a href="mailto:rh.icc.saintetienne@gmail.com" class="mt-2 inline-block text-sm text-white/85 hover:text-sage break-all">rh.icc.saintetienne@gmail.com</a>
     </div>
   </div>
   <p class="border-t border-white/10 text-center text-xs text-white/50 py-5" style="padding-bottom:calc(1.25rem + env(safe-area-inset-bottom,0px))">© <span id="year"></span> ICC Saint-Étienne. Tous droits réservés.</p>
@@ -708,58 +756,57 @@ tailwind.config = { theme: { extend: {
   };
 
   // ==== TABLEAU DES ÉVÉNEMENTS DYNAMIQUES ====
-  // Modifie simplement les valeurs ci-dessous pour changer la liste des événements
   const EVENTS = [
     // --- À VENIR ---
     {
       type: 'future',
-      jour: '25',
+      jour: '16',
       mois: 'Octobre',
-      titre: 'Soirée Louange & Témoignages',
-      description: "Un temps prolongé d'adoration et de partage fraternel pour clore le mois ensemble.",
-      horaire: "19h30 · À l'église (29 rue Élisée Reclus)",
-      infoBadge: 'Entrée libre · Tout public',
-      imageKey: 'ev_louange'
-    },
-    {
-      type: 'future',
-      jour: '15',
-      mois: 'Novembre',
-      titre: 'Célébration Spéciale EJP',
-      description: "Rassemblement des jeunes d'impact : musique contemporaine, temps d'échange et collation festive.",
-      horaire: '13h00 · Entrée gratuite',
-      infoBadge: 'Réservé 15–30 ans',
-      imageKey: 'ev_ejp'
-    },
-    {
-      type: 'future',
-      jour: '31',
-      mois: 'Décembre',
-      titre: 'Veillée de Traversée',
-      description: "Franchissons ensemble la nouvelle année dans la prière, l'action de grâce et la louange.",
-      horaire: "Dès 21h30 · À l'église",
-      infoBadge: 'Sur place & en direct',
+      titre: 'Rentrée des STARS',
+      description: 'Soirée de repositionnement spirituel pour se retrouver dans la présence de Dieu, être fortifiés et renouvelés.',
+      horaire: '19h30 · À l\'église (29 rue Élisée Reclus)',
+      infoBadge: 'Rentrée des STARS',
       imageKey: 'ev_veillee'
+    },
+    {
+      type: 'future',
+      jour: '18',
+      mois: 'Octobre',
+      titre: 'Culte Unique Spécial EJP x ICC',
+      description: 'Moment rempli de partage, d\'édification et de prières avec toute la jeunesse EJP et l\'église.',
+      horaire: '09h00 · À l\'église (29 rue Élisée Reclus)',
+      infoBadge: 'Culte Unique · Tout public',
+      imageKey: 'culte_dimanche'
+    },
+    {
+      type: 'future',
+      jour: '18',
+      mois: 'Octobre',
+      titre: 'Atelier Sans Filtre : Les Relations',
+      description: 'Échanges ouverts et sans tabou autour du mariage, de la fréquentation, du célibat et de la sexualité.',
+      horaire: '13h00 · À l\'église (29 rue Élisée Reclus)',
+      infoBadge: 'Atelier Jeunesse et Adultes',
+      imageKey: 'ev_ejp'
     },
 
     // --- PASSÉS ---
     {
       type: 'past',
-      mois: 'Septembre',
-      titre: "Rentrée des Familles d'Impact",
-      description: "Reprise officielle des cellules de maison dans toute l'agglomération stéphanoise."
+      mois: '2 Octobre',
+      titre: 'Clôture des 3 Jours de Jeûne & Prières',
+      description: 'Grand rassemblement de clôture en présentiel pour sceller trois journées de consécration et d\'intercession intense.'
     },
     {
       type: 'past',
-      mois: 'Juin',
-      titre: "Baptêmes d'Immersion",
-      description: "Une journée mémorable de célébration et de témoignages publics d'engagement de foi."
+      mois: 'Octobre',
+      titre: 'Traversée des Commandeurs',
+      description: 'Temps fort en ligne avec Pasteur Yvan Castanou pour consacrer le mois d\'octobre au Seigneur.'
     },
     {
       type: 'past',
-      mois: 'Pâques',
-      titre: "Culte de Résurrection",
-      description: "Célébration spéciale suivie d'un temps de partage convivial avec nos visiteurs."
+      mois: 'Octobre',
+      titre: 'ADP Spéciale : Ensemble, prions pour tes défis',
+      description: 'Atmosphère de prière dédiée aux sujets réels et besoins spécifiques de la communauté.'
     }
   ];
 
@@ -781,7 +828,7 @@ tailwind.config = { theme: { extend: {
         futureContainer.innerHTML += `
           <article class="bg-white rounded-2xl overflow-hidden border border-slate-200 flex flex-col justify-between hover:border-pine hover:shadow-lg transition-all">
             <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
-              <img src="${imgSrc}" loading="lazy" alt="${ev.titre}" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.src='${fallbackSrc}'; this.onerror=null;">
+              <img src="${imgSrc}" loading="lazy" alt="${ev.titre}" class="photo absolute inset-0 w-full h-full object-cover object-top" onerror="this.src='${fallbackSrc}'; this.onerror=null;">
               <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
               <div class="absolute top-4 left-4 bg-white/95 backdrop-blur px-3.5 py-1.5 rounded-xl shadow-md text-center">
                 <span class="block text-xl font-extrabold text-navy leading-tight">${ev.jour}</span>
@@ -829,10 +876,9 @@ tailwind.config = { theme: { extend: {
     ],
     facebook: "https://www.facebook.com/p/Impact-Centre-Chr%C3%A9tien-%C3%89glise-de-Saint-%C3%89tienne-100071847546439/?locale=fr_FR",
     instagram: "https://www.instagram.com/iccsaintetienne/?hl=fr",
-    googleReviews: "https://maps.google.com/?q=ICC+Saint-%C3%89tienne",
-    donation: ""
+    googleReviews: "https://maps.google.com/?q=ICC+Saint-%C3%89tienne"
   };
-  const EMAIL = "iccsaintetienne@gmail.com";
+  const EMAIL = "rh.icc.saintetienne@gmail.com";
 
   // Attribution des photos locales
   document.querySelectorAll('[data-img]').forEach(img => {
@@ -861,7 +907,6 @@ tailwind.config = { theme: { extend: {
     if (b2) b2.href = CONFIG.googleReviews;
     if (b3) b3.href = CONFIG.googleReviews;
   }
-  if (CONFIG.donation) { const d = document.getElementById('donBtn'); d.href = CONFIG.donation; d.target = '_blank'; d.rel = 'noopener'; }
 
   // ==== CULTE EN DIRECT (LIVE YOUTUBE) ====
   const videoBox = document.getElementById('videoBox');
@@ -951,7 +996,7 @@ tailwind.config = { theme: { extend: {
     btn.setAttribute('aria-expanded', open);
     btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
     document.getElementById('icoOpen').classList.toggle('hidden', open);
-    document.getElementById('icoClose').classList.toggle('hidden', !open);
+    document.getElementById('icoClose').classList.toggle('hidden', open);
   }
   btn.addEventListener('click', () => setMenu(menu.classList.contains('hidden')));
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
@@ -977,8 +1022,9 @@ tailwind.config = { theme: { extend: {
     });
   });
 
-  // Formulaire interactif
+  // Formulaire interactif & Gestion de l'affichage Calendly
   const tabs = document.querySelectorAll('.tab'), form = document.getElementById('form'), confirmBox = document.getElementById('confirm');
+  const calendlyContainer = document.getElementById('calendlyContainer');
   const typeNote = document.getElementById('typeNote');
   let type = 'question';
 
@@ -998,48 +1044,65 @@ tailwind.config = { theme: { extend: {
       body: 'Nous prions avec foi pour votre situation.' 
     },
     rdv: { 
-      label: 'Précisez l’objet de votre demande de rendez-vous', 
-      send: 'Demander un rendez-vous pastoral', 
-      note: 'Pour un entretien avec le pasteur ou un membre du conseil, laissez votre numéro afin que nous puissions convenir d’un créneau.', 
-      title: 'Demande de rendez-vous enregistrée.', 
-      body: 'Le berger ou un membre du conseil prendra contact avec vous rapidement pour convenir d’un échange.' 
+      label: 'Demande de rendez-vous pastoral', 
+      send: '', 
+      note: '', 
+      title: '', 
+      body: '' 
     }
   };
 
   function setType(t) {
     type = t; const c = TEXTS[t];
     tabs.forEach(b => b.setAttribute('aria-selected', b.dataset.type === t));
-    document.getElementById('msgLabel').textContent = c.label;
-    document.getElementById('sendLabel').textContent = c.send;
-    if (c.note) {
-      typeNote.textContent = c.note;
-      typeNote.classList.remove('hidden');
+
+    if (t === 'rdv') {
+      form.classList.add('hidden');
+      confirmBox.classList.add('hidden');
+      calendlyContainer.classList.remove('hidden');
     } else {
-      typeNote.classList.add('hidden');
+      calendlyContainer.classList.add('hidden');
+      form.classList.remove('hidden');
+      document.getElementById('msgLabel').textContent = c.label;
+      document.getElementById('sendLabel').textContent = c.send;
+      if (c.note) {
+        typeNote.textContent = c.note;
+        typeNote.classList.remove('hidden');
+      } else {
+        typeNote.classList.add('hidden');
+      }
     }
   }
   tabs.forEach(b => b.addEventListener('click', () => setType(b.dataset.type)));
 
   form.addEventListener('submit', e => {
     e.preventDefault();
-    const nom = form.nom, tel = form.tel, email = form.email, msg = form.msg, errs = form.querySelectorAll('.err');
-    const okMail = !email.value.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
-    const checks = [!!nom.value.trim(), okMail, !!msg.value.trim()];
+    const nom = form.nom, tel = form.tel, email = form.email, msg = form.msg;
+    const errs = form.querySelectorAll('.err');
+
+    // Validations obligatoires
+    const okNom = !!nom.value.trim();
+    const okTel = /^[0-9+\s.-]{8,}$/.test(tel.value.trim());
+    const okMail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+    const okMsg = !!msg.value.trim();
+
+    const checks = [okNom, okTel, okMail, okMsg];
+    const fields = [nom, tel, email, msg];
     
-    [nom, email, msg].forEach((f, i) => { 
+    fields.forEach((f, i) => { 
       errs[i].classList.toggle('hidden', checks[i]); 
       f.setAttribute('aria-invalid', !checks[i]); 
     });
 
     if (!checks.every(Boolean)) { 
-      [nom, email, msg][checks.indexOf(false)].focus(); 
+      fields[checks.indexOf(false)].focus(); 
       return; 
     }
 
     const c = TEXTS[type];
-    const prefix = type === 'rdv' ? 'Demande de RDV Pastoral' : (type === 'priere' ? 'Demande de Prière' : 'Question');
+    const prefix = type === 'priere' ? 'Demande de Prière' : 'Question';
     const subject = `${prefix} – ${nom.value.trim()}`;
-    const body = `${msg.value.trim()}\n\nContact : ${nom.value.trim()}\nTéléphone : ${tel.value.trim() || 'Non renseigné'}\nE-mail : ${email.value.trim() || 'Non renseigné'}`;
+    const body = `${msg.value.trim()}\n\nContact : ${nom.value.trim()}\nTéléphone : ${tel.value.trim()}\nE-mail : ${email.value.trim()}`;
 
     document.getElementById('confirmTitle').textContent = c.title;
     document.getElementById('confirmText').textContent = c.body;
@@ -1056,6 +1119,19 @@ tailwind.config = { theme: { extend: {
     form.classList.remove('hidden'); 
     form.nom.focus();
   });
+
+  // Fonction pour copier l'IBAN facilement
+  function copyRIB(text, btn) {
+    navigator.clipboard.writeText(text).then(() => {
+      const originalText = btn.textContent;
+      btn.textContent = 'Copié !';
+      btn.classList.add('bg-pine', 'text-white');
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.classList.remove('bg-pine', 'text-white');
+      }, 2000);
+    });
+  }
 </script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ICC Saint-Étienne – Impact Centre Chrétien</title>
-<meta name="description" content="ICC Saint-Étienne : cultes du dimanche, jeunes EJP, Familles d'Impact, temps des hommes et prière. 29 rue Élisée Reclus.">
+<meta name="description" content="ICC Saint-Étienne : cultes du dimanche, jeunes EJP, Familles d'Impact, temps des hommes et prière. Studios 7, 29 rue Élisée Reclus.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -63,6 +63,7 @@ tailwind.config = { theme: { extend: {
       <li><a class="hover:text-sage transition-colors" href="#horaires">Horaires</a></li>
       <li><a class="hover:text-sage transition-colors" href="#evenements">Événements</a></li>
       <li><a class="hover:text-sage transition-colors" href="#predications">Media & Messages</a></li>
+      <li><a class="hover:text-sage transition-colors" href="#dons">Dons</a></li>
       <li><a class="hover:text-sage transition-colors" href="#avis">Avis</a></li>
       <li><a class="hover:text-sage transition-colors" href="#contact">Contact & RDV</a></li>
       <li><a href="#premiere-fois" class="bg-gold hover:bg-goldd text-navy font-bold px-5 py-2.5 rounded-full transition-colors shadow-sm">Je viens dimanche</a></li>
@@ -78,6 +79,7 @@ tailwind.config = { theme: { extend: {
       <li><a class="block py-3.5 border-b border-white/10" href="#horaires">Horaires</a></li>
       <li><a class="block py-3.5 border-b border-white/10" href="#evenements">Événements</a></li>
       <li><a class="block py-3.5 border-b border-white/10" href="#predications">Media & Messages</a></li>
+      <li><a class="block py-3.5 border-b border-white/10" href="#dons">Dons</a></li>
       <li><a class="block py-3.5 border-b border-white/10" href="#avis">Avis</a></li>
       <li><a class="block py-3.5 border-b border-white/10" href="#contact">Contact & RDV</a></li>
       <li><a href="#premiere-fois" class="mt-4 block text-center bg-gold text-navy font-bold px-6 py-3 rounded-full">Je viens dimanche</a></li>
@@ -102,7 +104,7 @@ tailwind.config = { theme: { extend: {
       <p class="mt-6 text-lg text-white/85 leading-relaxed max-w-xl">Construire des hommes et des femmes qui inspirent et influencent positivement leur environnement pour la gloire de Dieu et pour l'avancement de l'humanité.</p>
       <div class="mt-10 flex flex-wrap gap-4">
         <a href="#premiere-fois" class="bg-gold hover:bg-goldd text-navy font-bold px-8 py-4 rounded-full transition-colors shadow-lg">Préparer ma visite</a>
-        <a href="#horaires" class="border border-white/50 hover:bg-white hover:text-navy font-semibold px-8 py-4 rounded-full transition-colors">Nos Rendez-vous de la semaine</a>
+        <a href="#horaires" class="border border-white/50 hover:bg-white hover:text-navy font-semibold px-8 py-4 rounded-full transition-colors">Nos horaires</a>
       </div>
     </div>
   </div>
@@ -111,21 +113,21 @@ tailwind.config = { theme: { extend: {
 <!-- Prochain culte -->
 <section aria-label="Prochain culte" class="relative z-10 -mt-24 md:-mt-28 px-5">
   <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-2xl border-t-4 border-pine grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-slate-200">
-    <div class="p-7">
+    <a href="#horaires" class="p-7 block hover:bg-slate-50 transition-colors">
       <p class="text-sm font-semibold text-pine">Dimanche, 9h00</p>
       <p class="mt-1 text-xl font-bold text-navy">Culte de célébration</p>
       <p class="mt-1 text-sm text-slate-600">Louange, message, accueil</p>
-    </div>
-    <div class="p-7">
+    </a>
+    <a href="#horaires" class="p-7 block hover:bg-slate-50 transition-colors">
       <p class="text-sm font-semibold text-pine">Dimanche, 13h00</p>
       <p class="mt-1 text-xl font-bold text-navy">EJP, culte des jeunes</p>
       <p class="mt-1 text-sm text-slate-600">Pour les jeunes prodiges</p>
-    </div>
-    <div class="p-7">
+    </a>
+    <a target="_blank" rel="noopener" href="https://maps.app.goo.gl/2jffYvdZNAPfYmze7" class="p-7 block hover:bg-slate-50 transition-colors">
       <p class="text-sm font-semibold text-pine font-bold">Où nous trouver</p>
-      <p class="mt-1 text-xl font-bold text-navy">29 rue Élisée Reclus</p>
-      <p class="mt-1 text-sm text-slate-600">42000 Saint-Étienne · accès STAS</p>
-    </div>
+      <p class="mt-1 text-xl font-bold text-navy">Locaux Studios 7</p>
+      <p class="mt-1 text-sm text-slate-600">29 rue Élisée Reclus · accès STAS →</p>
+    </a>
   </div>
 </section>
 
@@ -133,9 +135,9 @@ tailwind.config = { theme: { extend: {
 <section id="premiere-fois" class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-5">
     <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy max-w-2xl leading-tight">Première fois chez nous ? Venez comme vous êtes.</h2>
-    <p class="mt-6 text-slate-600 max-w-2xl leading-relaxed">Voici à quoi ressemble un dimanche à ICC Saint-Étienne. Aucune inscription n'est nécessaire : il suffit de pousser la porte.</p>
+    <p class="mt-6 text-slate-600 max-w-2xl leading-relaxed">Voici à quoi ressemble un dimanche à ICC Saint-Étienne. Aucune inscription n'est nécessaire : il suffit de sonner et ouvrir la porte (locaux Studios 7, au 29 rue Élisée Reclus).</p>
     <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
-      <article class="border-t-2 border-pine pt-5"><h3 class="font-bold text-lg text-navy">Accueil personnalisé</h3><p class="mt-2 text-slate-600 text-sm leading-relaxed">Une équipe vous accueille à l'entrée, vous oriente et vous présente à d'autres personnes.</p></article>
+      <article class="border-t-2 border-pine pt-5"><h3 class="font-bold text-lg text-navy">Accueil personnalisé</h3><p class="mt-2 text-slate-600 text-sm leading-relaxed">Une équipe vous accueille dès l'entrée des locaux Studios 7, vous oriente et vous installe.</p></article>
       <article class="border-t-2 border-pine pt-5"><h3 class="font-bold text-lg text-navy">Louange et message</h3><p class="mt-2 text-slate-600 text-sm leading-relaxed">Un temps de louange vivante, puis un enseignement pour vous édifier au quotidien.</p></article>
       <article class="border-t-2 border-pine pt-5"><h3 class="font-bold text-lg text-navy">Impact Junior</h3><p class="mt-2 text-slate-600 text-sm leading-relaxed">Vos enfants sont pris en charge avec soin, avec une approche pédagogique pendant le culte.</p></article>
       <article class="border-t-2 border-pine pt-5"><h3 class="font-bold text-lg text-navy">Collation et échanges</h3><p class="mt-2 text-slate-600 text-sm leading-relaxed">Restez après le culte pour partager une collation et faire connaissance, sans pression.</p></article>
@@ -175,7 +177,7 @@ tailwind.config = { theme: { extend: {
             <h3 class="text-xl font-bold text-navy">Culte de célébration</h3>
             <p class="mt-2 text-slate-600 text-sm leading-relaxed">Louange vivante, prédication inspirante et accueil chaleureux. Le rendez-vous central de l'église.</p>
           </div>
-          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église · Tout public</p>
+          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église (Studios 7) · Tout public</p>
         </div>
       </article>
 
@@ -191,7 +193,7 @@ tailwind.config = { theme: { extend: {
             <h3 class="text-xl font-bold text-navy">EJP: Jeunes Prodiges</h3>
             <p class="mt-2 text-slate-600 text-sm leading-relaxed">Culte conçu par et pour les jeunes : louange contemporaine, messages adaptés et ambiance fraternelle.</p>
           </div>
-          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église · Jeunes</p>
+          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église (Studios 7) · Jeunes</p>
         </div>
       </article>
 
@@ -205,12 +207,16 @@ tailwind.config = { theme: { extend: {
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div>
             <h3 class="text-xl font-bold text-navy">FIJ: Familles d'Impact Jeunes</h3>
-            <p class="mt-2 text-slate-600 text-sm leading-relaxed">Les maisonnées des jeunes chaque mardi soir. Des temps d'édification, de prière et de communion entre jeunes.</p>
+            <p class="mt-2 text-slate-600 text-sm leading-relaxed">Les maisonnées des jeunes chaque mardi soir. Temps d'édification, de prière et de communion.</p>
           </div>
-          <p class="mt-4 text-xs font-semibold text-pine pt-3 border-t border-slate-100 font-medium">Tous les mardis soir · Jeunes</p>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-pine">En maisons (Saint-Étienne)</span>
+            <a href="#contact" class="text-xs font-bold text-navy hover:underline">Rejoindre →</a>
+          </div>
         </div>
       </article>
 
+      
       <!-- 4. Le Temps des Hommes -->
       <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
         <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
@@ -223,7 +229,12 @@ tailwind.config = { theme: { extend: {
             <h3 class="text-xl font-bold text-navy">Le Temps des Hommes</h3>
             <p class="mt-2 text-slate-600 text-sm leading-relaxed">Rassemblement mensuel dédié aux hommes. Échanges sur le leadership biblique, la famille, le travail et la foi au quotidien.</p>
           </div>
-          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">Mensuel · Tous les hommes bienvenus</p>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-pine">Connexion Zoom & Présentiel</span>
+            <a target="_blank" rel="noopener" href="https://impactcentrechretien.zoom.us/j/94011859791" class="inline-flex items-center gap-1 text-xs font-bold text-white bg-pine hover:bg-forest px-3 py-1.5 rounded-lg transition-colors shadow-sm">
+              Rejoindre sur Zoom →
+            </a>
+          </div>
         </div>
       </article>
 
@@ -239,7 +250,10 @@ tailwind.config = { theme: { extend: {
             <h3 class="text-xl font-bold text-navy">FI: Familles d'Impact</h3>
             <p class="mt-2 text-slate-600 text-sm leading-relaxed">Cellules de maison réparties dans l'agglomération stéphanoise pour approfondir les enseignements et s'entraider.</p>
           </div>
-          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">En petits groupes de maison</p>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs font-semibold text-pine">En maisons / Cellules locales</span>
+            <a href="#contact" class="text-xs font-bold text-navy hover:underline">Trouver une FI →</a>
+          </div>
         </div>
       </article>
 
@@ -248,14 +262,14 @@ tailwind.config = { theme: { extend: {
         <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
           <img data-img="priere_adp" loading="lazy" alt="Atmosphère de Prière ADP" class="photo absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
           <div class="absolute inset-0 bg-gradient-to-t from-forest/60 to-transparent"></div>
-          <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Vendredi · 19h30</span>
+          <span class="absolute top-4 left-4 bg-white/95 text-navy font-bold text-xs uppercase px-3 py-1 rounded-md shadow-sm">Vendredi · 20h00</span>
         </div>
         <div class="p-6 flex-1 flex flex-col justify-between">
           <div>
             <h3 class="text-xl font-bold text-navy">ADP: Atmosphère de Prière</h3>
             <p class="mt-2 text-slate-600 text-sm leading-relaxed">Grand rassemblement de prière et d'intercession à l'église pour rechercher la présence divine et renouveler ses forces.</p>
           </div>
-          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église · Tout public</p>
+          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">À l'église (Studios 7) · Tout public</p>
         </div>
       </article>
 
@@ -263,13 +277,13 @@ tailwind.config = { theme: { extend: {
       <article class="lg:col-span-3 bg-navy text-white rounded-2xl p-8 md:p-10 grid md:grid-cols-2 gap-8 items-center border-l-4 border-pine">
         <div>
           <p class="text-xs font-bold uppercase tracking-wider text-sage">Lieu de culte à Saint-Étienne</p>
-          <h3 class="mt-2 text-2xl font-bold">Nous rejoindre au 29 rue Élisée Reclus</h3>
-          <p class="mt-3 text-white/80 leading-relaxed">Accessible rapidement en transports stéphanois (tram & bus réseau STAS). Notre équipe vous réserve un accueil chaleureux dès l'entrée.</p>
+          <h3 class="mt-2 text-2xl font-bold">Locaux Studios 7 — 29 rue Élisée Reclus</h3>
+          <p class="mt-3 text-white/80 leading-relaxed">Le numéro 29 n'étant pas directement affiché sur la rue, cherchez l'enseigne **Studios 7**. Accessible rapidement en transports stéphanois (tram & bus réseau STAS).</p>
         </div>
         <div class="md:border-l md:border-white/20 md:pl-8 flex flex-col gap-4">
           <div>
             <p class="font-bold text-lg">42000 Saint-Étienne</p>
-            <p class="text-sm text-white/70">Tramway et bus STAS à proximité immédiate.</p>
+            <p class="text-sm text-white/70">Sonner et ouvrir la porte à l'entrée Studios 7.</p>
           </div>
           <div class="flex flex-wrap gap-4 pt-2">
             <a target="_blank" rel="noopener" href="https://maps.app.goo.gl/2jffYvdZNAPfYmze7" class="inline-flex items-center gap-2 bg-gold hover:bg-goldd text-navy font-bold px-5 py-2.5 rounded-full text-sm transition-colors shadow-sm">
@@ -292,7 +306,7 @@ tailwind.config = { theme: { extend: {
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
       <div>
         <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Actualités & Événements</h2>
-        <p class="mt-6 text-slate-600 max-w-xl leading-relaxed">Conférences, séminaires, veillées spéciales et temps forts de notre communauté.</p>
+        <p class="mt-6 text-slate-600 max-w-xl leading-relaxed">Conférences, séminaires, veillées spéciales et temps forts de notre communauté localement et du réseau ICC.</p>
       </div>
 
       <div role="tablist" aria-label="Type d'événements" class="inline-flex p-1 rounded-full bg-fog self-start md:self-auto">
@@ -317,8 +331,8 @@ tailwind.config = { theme: { extend: {
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
       <div>
         <p class="text-xs font-bold uppercase tracking-wider text-pine font-medium">Médias & Messages</p>
-        <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Cultes, Directs & Prédications</h2>
-        <p class="mt-4 text-slate-600 max-w-2xl leading-relaxed">Suivez nos célébrations dominicales en direct ou retrouvez les derniers enseignements et temps forts d'ICC Saint-Étienne.</p>
+        <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Prédications & Culte en direct</h2>
+        <p class="mt-4 text-slate-600 max-w-2xl leading-relaxed">Retrouvez les messages et enseignements d'ICC Saint-Étienne ou suivez le culte dominical en direct en ligne.</p>
       </div>
       <a target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV/streams" class="text-sm font-bold text-navy hover:text-pine transition-colors inline-flex items-center gap-1.5 self-start md:self-auto bg-white px-4 py-2.5 rounded-full border border-slate-200 shadow-sm">
         <span>Chaîne YouTube ICCTV</span>
@@ -334,9 +348,9 @@ tailwind.config = { theme: { extend: {
         <div class="flex items-center justify-between mb-3">
           <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-pine bg-tint px-3 py-1 rounded-full">
             <span class="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
-            Dernier Culte Dominical
+            Culte Dominical en Direct (ICC Paris)
           </span>
-          <span class="text-xs text-slate-400 font-medium">Direct & Replay</span>
+          <span class="text-xs text-slate-400 font-medium">En ligne</span>
         </div>
 
         <div id="videoBox" class="relative aspect-video rounded-xl overflow-hidden bg-navy shadow-md group cursor-pointer border-b-4 border-pine">
@@ -355,14 +369,14 @@ tailwind.config = { theme: { extend: {
         </div>
 
         <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-          <span>Diffusion officielle ICC TV</span>
+          <span>Diffusion en direct d'ICC Paris (Siège)</span>
           <a data-social="youtube" target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV/streams" class="font-semibold text-navy hover:text-pine underline">Voir tous les directs →</a>
         </div>
       </div>
 
-      <!-- Côté Droit : Les 3 Prédications Récentes (Largeur 5/12) -->
+      <!-- Côté Droit : Les Prédications Récentes de St-Étienne (Largeur 5/12) -->
       <div class="lg:col-span-5 flex flex-col gap-4">
-        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1">Prédications & Témoignages récents</p>
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1">Messages d'ICC Saint-Étienne</p>
 
         <!-- Vidéo 1 -->
         <article class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm flex gap-4 items-center hover:border-pine transition-colors">
@@ -375,7 +389,7 @@ tailwind.config = { theme: { extend: {
             </div>
           </div>
           <div class="flex-1 min-w-0">
-            <span class="text-[10px] font-bold uppercase text-pine">Enseignement</span>
+            <span class="text-[10px] font-bold uppercase text-pine">ICC Saint-Étienne</span>
             <h3 class="local-title text-sm font-bold text-navy line-clamp-2 leading-snug">Dieu se rassemble des Hommes</h3>
             <p class="text-xs text-slate-500 mt-1">Ps Alexandre AMAZOU</p>
           </div>
@@ -392,7 +406,7 @@ tailwind.config = { theme: { extend: {
             </div>
           </div>
           <div class="flex-1 min-w-0">
-            <span class="text-[10px] font-bold uppercase text-pine">Jeunes (EJP)</span>
+            <span class="text-[10px] font-bold uppercase text-pine">Jeunes (EJP St-Étienne)</span>
             <h3 class="local-title text-sm font-bold text-navy line-clamp-2 leading-snug">Travailler à sa propre construction</h3>
             <p class="text-xs text-slate-500 mt-1">Samuel EBOUMBOU</p>
           </div>
@@ -409,7 +423,7 @@ tailwind.config = { theme: { extend: {
             </div>
           </div>
           <div class="flex-1 min-w-0">
-            <span class="text-[10px] font-bold uppercase text-pine">Prière (ADP)</span>
+            <span class="text-[10px] font-bold uppercase text-pine">Prière (ADP St-Étienne)</span>
             <h3 class="local-title text-sm font-bold text-navy line-clamp-2 leading-snug">Clôture - 24h non-stop de prières</h3>
             <p class="text-xs text-slate-500 mt-1">Atmosphère de Prière</p>
           </div>
@@ -609,7 +623,7 @@ tailwind.config = { theme: { extend: {
 <section id="contact" class="py-24 bg-mist border-t border-slate-100">
   <div class="max-w-3xl mx-auto px-5">
     <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Échanger avec nous</h2>
-    <p class="mt-6 text-slate-600 leading-relaxed">Une question, un sujet de prière ou besoin d'un échange avec le pasteur ou un membre du conseil pastoral ? Choisissez votre demande.</p>
+    <p class="mt-6 text-slate-600 leading-relaxed">Une question, un sujet de prière, l'envie de rejoindre une FI ou besoin d'un échange avec le pasteur ? Choisissez votre demande.</p>
     
     <div role="tablist" aria-label="Type de message" class="mt-8 flex flex-wrap gap-2 p-1.5 rounded-2xl bg-fog">
       <button role="tab" id="tab-q" aria-selected="true" aria-controls="form" data-type="question" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">Question</button>
@@ -699,29 +713,46 @@ tailwind.config = { theme: { extend: {
         <li><a data-social="youtube" target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV/streams" class="border-b border-sage pb-0.5 hover:text-sage">YouTube</a></li>
       </ul>
     </div>
+
+    <!-- Adresse & Accès -->
     <div>
       <p class="font-bold text-sage">Adresse & Accès</p>
-      <address class="not-italic mt-3 text-sm text-white/85 leading-relaxed">
-        29 rue Élisée Reclus<br>
-        42000 Saint-Étienne
-      </address>
-      <p class="mt-2 text-sm text-sage font-medium">Tram & bus STAS à proximité immédiate.</p>
+      <a target="_blank" rel="noopener" href="https://maps.app.goo.gl/2jffYvdZNAPfYmze7" class="group block mt-3 text-sm text-white/85 hover:text-sage transition-colors leading-relaxed">
+        <address class="not-italic">
+          <strong>Studios 7</strong><br>
+          29 rue Élisée Reclus<br>
+          42000 Saint-Étienne
+        </address>
+        <span class="mt-2 block text-xs text-sage group-hover:underline">Ouvrir sur Google Maps →</span>
+      </a>
+      <p class="mt-2 text-xs text-white/60">Sonner et ouvrir la porte. Tram & bus STAS à proximité.</p>
     </div>
+
+    <!-- Rendez-vous clés cliquables -->
     <div>
       <p class="font-bold text-sage">Rendez-vous clés</p>
-      <ul class="mt-3 text-sm text-white/85 space-y-1.5">
-        <li>Dimanche 9h : Culte de célébration</li>
-        <li>Dimanche 13h : EJP Jeunes</li>
-        <li>Mardi 19h30 : FIJ (Jeunes)</li>
-        <li>2ᵉ mercredi 19h : Temps des Hommes</li>
-        <li>Jeudi 19h30 : Familles d'Impact</li>
-        <li>Vendredi 19h30 : Prière (ADP)</li>
+      <ul class="mt-3 text-sm text-white/85 space-y-2">
+        <li><a href="#horaires" class="hover:text-sage hover:underline transition-colors block">Dimanche 9h : Culte de célébration</a></li>
+        <li><a href="#horaires" class="hover:text-sage hover:underline transition-colors block">Dimanche 13h : EJP Jeunes</a></li>
+        <li><a href="#horaires" class="hover:text-sage hover:underline transition-colors block">Mardi 19h30 : FIJ (Jeunes)</a></li>
+        <li><a href="#horaires" class="hover:text-sage hover:underline transition-colors block">2ᵉ mercredi 19h : Temps des Hommes</a></li>
+        <li><a href="#horaires" class="hover:text-sage hover:underline transition-colors block">Jeudi 19h30 : Familles d'Impact</a></li>
+        <li><a href="#horaires" class="hover:text-sage hover:underline transition-colors block">Vendredi 20h00 : Prière (ADP)</a></li>
       </ul>
     </div>
+
+    <!-- Contact & Pasteur -->
     <div>
       <p class="font-bold text-sage">Contact & Pasteur</p>
       <p class="mt-3 text-sm text-white/70">Besoin d'un rendez-vous ou d'un conseil ?</p>
-      <a href="mailto:rh.icc.saintetienne@gmail.com" class="mt-2 inline-block text-sm text-white/85 hover:text-sage break-all">rh.icc.saintetienne@gmail.com</a>
+      <div class="mt-3 space-y-2">
+        <a href="#contact" class="block text-sm text-gold hover:text-goldd font-semibold hover:underline">
+          → Prendre RDV ou rejoindre une FI
+        </a>
+        <a href="mailto:rh.icc.saintetienne@gmail.com" class="block text-xs text-white/85 hover:text-sage break-all">
+          rh.icc.saintetienne@gmail.com
+        </a>
+      </div>
     </div>
   </div>
   <p class="border-t border-white/10 text-center text-xs text-white/50 py-5" style="padding-bottom:calc(1.25rem + env(safe-area-inset-bottom,0px))">© <span id="year"></span> ICC Saint-Étienne. Tous droits réservés.</p>
@@ -764,7 +795,7 @@ tailwind.config = { theme: { extend: {
       mois: 'Octobre',
       titre: 'Rentrée des STARS',
       description: 'Soirée de repositionnement spirituel pour se retrouver dans la présence de Dieu, être fortifiés et renouvelés.',
-      horaire: '19h30 · À l\'église (29 rue Élisée Reclus)',
+      horaire: '19h30 · À l\'église (Locaux Studios 7)',
       infoBadge: 'Rentrée des STARS',
       imageKey: 'ev_veillee'
     },
@@ -774,7 +805,7 @@ tailwind.config = { theme: { extend: {
       mois: 'Octobre',
       titre: 'Culte Unique Spécial EJP x ICC',
       description: 'Moment rempli de partage, d\'édification et de prières avec toute la jeunesse EJP et l\'église.',
-      horaire: '09h00 · À l\'église (29 rue Élisée Reclus)',
+      horaire: '09h00 · À l\'église (Locaux Studios 7)',
       infoBadge: 'Culte Unique · Tout public',
       imageKey: 'culte_dimanche'
     },
@@ -784,7 +815,7 @@ tailwind.config = { theme: { extend: {
       mois: 'Octobre',
       titre: 'Atelier Sans Filtre : Les Relations',
       description: 'Échanges ouverts et sans tabou autour du mariage, de la fréquentation, du célibat et de la sexualité.',
-      horaire: '13h00 · À l\'église (29 rue Élisée Reclus)',
+      horaire: '13h00 · À l\'église (Locaux Studios 7)',
       infoBadge: 'Atelier Jeunesse et Adultes',
       imageKey: 'ev_ejp'
     },
@@ -1030,16 +1061,16 @@ tailwind.config = { theme: { extend: {
 
   const TEXTS = {
     question: { 
-      label: 'Votre question', 
+      label: 'Votre question ou demande d\'intégration en FI', 
       send: 'Envoyer ma question', 
       note: '', 
-      title: 'Merci, votre question est prête.', 
+      title: 'Merci, votre message est prêt.', 
       body: 'Nous vous répondrons avec joie dans les meilleurs délais.' 
     },
     priere: { 
       label: 'Votre sujet de prière', 
       send: 'Envoyer ma demande de prière', 
-      note: 'Votre sujet de prière est strictement confidentiel et porté par notre équipe d’intercession.', 
+      note: 'Votre sujet de prière est strictly confidentiel et porté par notre équipe d’intercession.', 
       title: 'Votre demande de prière est prête.', 
       body: 'Nous prions avec foi pour votre situation.' 
     },
@@ -1100,7 +1131,7 @@ tailwind.config = { theme: { extend: {
     }
 
     const c = TEXTS[type];
-    const prefix = type === 'priere' ? 'Demande de Prière' : 'Question';
+    const prefix = type === 'priere' ? 'Demande de Prière' : 'Question / Contact';
     const subject = `${prefix} – ${nom.value.trim()}`;
     const body = `${msg.value.trim()}\n\nContact : ${nom.value.trim()}\nTéléphone : ${tel.value.trim()}\nE-mail : ${email.value.trim()}`;
 

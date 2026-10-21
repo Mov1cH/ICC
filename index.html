@@ -131,6 +131,25 @@ tailwind.config = { theme: { extend: {
   </div>
 </section>
 
+<!-- Section Fondateurs Pasteur Yvan & Modestine Castanou -->
+<section class="py-20 bg-fog border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-12 gap-10 items-center">
+    <div class="md:col-span-7">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight leading-tight">
+        Pasteur Yvan & Modestine<br>
+        <span class="uppercase">Castanou</span>
+      </h2>
+      <p class="mt-6 text-slate-700 leading-relaxed text-base sm:text-lg">
+        Yvan Castanou est le Père fondateur des églises « Impact Centre Chrétien » implantées dans le monde, à travers lesquelles le Saint-Esprit transforme une multitude d'hommes et de femmes en de véritables adorateurs (disciples). Après avoir effectué un premier cursus biblique en Angleterre, il en a suivi une autre à l'Institut Biblique de Paris et à l'Académie des Hautes Etudes Théologiques et Pastorales.
+      </p>
+
+    </div>
+    <div class="md:col-span-5 flex justify-center">
+      <img src="photos/pasteurs-castanou.jpg" alt="Pasteur Yvan & Modestine Castanou" class="w-full max-w-md object-contain drop-shadow-xl" onerror="this.src='https://impactcentrechretien.org/wp-content/uploads/2022/02/yvan-modestine-castanou.png'; this.onerror=null;">
+    </div>
+  </div>
+</section>
+
 <!-- Première fois -->
 <section id="premiere-fois" class="py-24 bg-white">
   <div class="max-w-6xl mx-auto px-5">
@@ -211,12 +230,11 @@ tailwind.config = { theme: { extend: {
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
             <span class="text-xs font-semibold text-pine">En maisons (Saint-Étienne)</span>
-            <a href="#contact" class="text-xs font-bold text-navy hover:underline">Rejoindre →</a>
+            <a href="#contact" onclick="setType('question_ejp')" class="text-xs font-bold text-navy hover:underline">Rejoindre →</a>
           </div>
         </div>
       </article>
 
-      
       <!-- 4. Le Temps des Hommes -->
       <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200 flex flex-col">
         <div class="relative aspect-[16/10] bg-navy border-b-4 border-pine overflow-hidden">
@@ -229,12 +247,7 @@ tailwind.config = { theme: { extend: {
             <h3 class="text-xl font-bold text-navy">Le Temps des Hommes</h3>
             <p class="mt-2 text-slate-600 text-sm leading-relaxed">Rassemblement mensuel dédié aux hommes. Échanges sur le leadership biblique, la famille, le travail et la foi au quotidien.</p>
           </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs font-semibold text-pine">Connexion Zoom & Présentiel</span>
-            <a target="_blank" rel="noopener" href="https://impactcentrechretien.zoom.us/j/94011859791" class="inline-flex items-center gap-1 text-xs font-bold text-white bg-pine hover:bg-forest px-3 py-1.5 rounded-lg transition-colors shadow-sm">
-              Rejoindre sur Zoom →
-            </a>
-          </div>
+          <p class="mt-4 text-xs font-semibold text-slate-500 pt-3 border-t border-slate-100">Connexion Zoom & Présentiel</p>
         </div>
       </article>
 
@@ -252,7 +265,7 @@ tailwind.config = { theme: { extend: {
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
             <span class="text-xs font-semibold text-pine">En maisons / Cellules locales</span>
-            <a href="#contact" class="text-xs font-bold text-navy hover:underline">Trouver une FI →</a>
+            <a href="#contact" onclick="setType('question')" class="text-xs font-bold text-navy hover:underline">Trouver une FI →</a>
           </div>
         </div>
       </article>
@@ -332,7 +345,7 @@ tailwind.config = { theme: { extend: {
       <div>
         <p class="text-xs font-bold uppercase tracking-wider text-pine font-medium">Médias & Messages</p>
         <h2 class="rule text-3xl md:text-4xl font-extrabold text-navy">Prédications & Culte en direct</h2>
-        <p class="mt-4 text-slate-600 max-w-2xl leading-relaxed">Retrouvez les messages et enseignements d'ICC Saint-Étienne ou suivez le culte dominical en direct en ligne.</p>
+        <p class="mt-4 text-slate-600 max-w-2xl leading-relaxed">Retrouvez les messages et enseignements d'ICC ou suivez le culte dominical en direct en ligne.</p>
       </div>
       <a target="_blank" rel="noopener" href="https://www.youtube.com/@ICCTV/streams" class="text-sm font-bold text-navy hover:text-pine transition-colors inline-flex items-center gap-1.5 self-start md:self-auto bg-white px-4 py-2.5 rounded-full border border-slate-200 shadow-sm">
         <span>Chaîne YouTube ICCTV</span>
@@ -376,7 +389,7 @@ tailwind.config = { theme: { extend: {
 
       <!-- Côté Droit : Les Prédications Récentes de St-Étienne (Largeur 5/12) -->
       <div class="lg:col-span-5 flex flex-col gap-4">
-        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1">Messages d'ICC Saint-Étienne</p>
+        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 px-1">Messages d'Impact Centre Chrétien</p>
 
         <!-- Vidéo 1 -->
         <article class="bg-white rounded-xl p-3 border border-slate-200 shadow-sm flex gap-4 items-center hover:border-pine transition-colors">
@@ -389,7 +402,7 @@ tailwind.config = { theme: { extend: {
             </div>
           </div>
           <div class="flex-1 min-w-0">
-            <span class="text-[10px] font-bold uppercase text-pine">ICC Saint-Étienne</span>
+            <span class="text-[10px] font-bold uppercase text-pine">Impact Centre Chrétien</span>
             <h3 class="local-title text-sm font-bold text-navy line-clamp-2 leading-snug">Dieu se rassemble des Hommes</h3>
             <p class="text-xs text-slate-500 mt-1">Ps Alexandre AMAZOU</p>
           </div>
@@ -406,7 +419,7 @@ tailwind.config = { theme: { extend: {
             </div>
           </div>
           <div class="flex-1 min-w-0">
-            <span class="text-[10px] font-bold uppercase text-pine">Jeunes (EJP St-Étienne)</span>
+            <span class="text-[10px] font-bold uppercase text-pine">Église Jeunes Prodiges</span>
             <h3 class="local-title text-sm font-bold text-navy line-clamp-2 leading-snug">Travailler à sa propre construction</h3>
             <p class="text-xs text-slate-500 mt-1">Samuel EBOUMBOU</p>
           </div>
@@ -423,7 +436,7 @@ tailwind.config = { theme: { extend: {
             </div>
           </div>
           <div class="flex-1 min-w-0">
-            <span class="text-[10px] font-bold uppercase text-pine">Prière (ADP St-Étienne)</span>
+            <span class="text-[10px] font-bold uppercase text-pine">Autres Messages</span>
             <h3 class="local-title text-sm font-bold text-navy line-clamp-2 leading-snug">Clôture - 24h non-stop de prières</h3>
             <p class="text-xs text-slate-500 mt-1">Atmosphère de Prière</p>
           </div>
@@ -626,12 +639,13 @@ tailwind.config = { theme: { extend: {
     <p class="mt-6 text-slate-600 leading-relaxed">Une question, un sujet de prière, l'envie de rejoindre une FI ou besoin d'un échange avec le pasteur ? Choisissez votre demande.</p>
     
     <div role="tablist" aria-label="Type de message" class="mt-8 flex flex-wrap gap-2 p-1.5 rounded-2xl bg-fog">
-      <button role="tab" id="tab-q" aria-selected="true" aria-controls="form" data-type="question" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">Question</button>
-      <button role="tab" id="tab-p" aria-selected="false" aria-controls="form" data-type="priere" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">Sujet de prière</button>
-      <button role="tab" id="tab-rdv" aria-selected="false" aria-controls="calendlyContainer" data-type="rdv" class="tab flex-1 min-w-[140px] px-4 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">RDV pastoral / Conseil</button>
+      <button role="tab" id="tab-q" aria-selected="true" aria-controls="form" data-type="question" class="tab flex-1 min-w-[130px] px-3.5 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">Question ICC</button>
+      <button role="tab" id="tab-ejp" aria-selected="false" aria-controls="form" data-type="question_ejp" class="tab flex-1 min-w-[130px] px-3.5 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">Question EJP</button>
+      <button role="tab" id="tab-p" aria-selected="false" aria-controls="form" data-type="priere" class="tab flex-1 min-w-[130px] px-3.5 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">Sujet de prière</button>
+      <button role="tab" id="tab-rdv" aria-selected="false" aria-controls="calendlyContainer" data-type="rdv" class="tab flex-1 min-w-[130px] px-3.5 py-2.5 rounded-xl font-semibold text-sm text-navy transition-colors">RDV pastoral / Conseil</button>
     </div>
 
-    <!-- Formulaire classique pour Question & Prière -->
+    <!-- Formulaire classique pour Questions & Prière -->
     <form id="form" role="tabpanel" class="mt-6 space-y-5" novalidate>
       <p id="typeNote" class="hidden rounded-xl bg-tint border-l-4 border-pine text-navy text-sm p-4 shadow-sm"></p>
       
@@ -909,7 +923,8 @@ tailwind.config = { theme: { extend: {
     instagram: "https://www.instagram.com/iccsaintetienne/?hl=fr",
     googleReviews: "https://maps.google.com/?q=ICC+Saint-%C3%89tienne"
   };
-  const EMAIL = "rh.icc.saintetienne@gmail.com";
+  const EMAIL_ICC = "rh.icc.saintetienne@gmail.com";
+  const EMAIL_EJP = "mji.iccsaintetienne@gmail.com";
 
   // Attribution des photos locales
   document.querySelectorAll('[data-img]').forEach(img => {
@@ -1053,7 +1068,7 @@ tailwind.config = { theme: { extend: {
     });
   });
 
-  // Formulaire interactif & Gestion de l'affichage Calendly
+  // Formulaire interactif & Gestion des onglets de contact
   const tabs = document.querySelectorAll('.tab'), form = document.getElementById('form'), confirmBox = document.getElementById('confirm');
   const calendlyContainer = document.getElementById('calendlyContainer');
   const typeNote = document.getElementById('typeNote');
@@ -1061,16 +1076,23 @@ tailwind.config = { theme: { extend: {
 
   const TEXTS = {
     question: { 
-      label: 'Votre question ou demande d\'intégration en FI', 
-      send: 'Envoyer ma question', 
-      note: '', 
+      label: 'Votre question générale ou demande d\'intégration d\'une FI', 
+      send: 'Envoyer ma question à l\'ICC', 
+      note: 'Votre message sera transmis directement à l\'équipe pastorale de ICC Saint-Etienne (rh.icc.saintetienne@gmail.com).', 
       title: 'Merci, votre message est prêt.', 
-      body: 'Nous vous répondrons avec joie dans les meilleurs délais.' 
+      body: 'Notre équipe vous répondra avec joie dans les meilleurs délais.' 
+    },
+    question_ejp: { 
+      label: 'Votre question générale ou demande d\'intégration d\'une FIJ', 
+      send: 'Envoyer ma question à l\'EJP', 
+      note: 'Votre message sera transmis directement à l\'équipe pastorale de EJP Saint-Etienne (mji.iccsaintetienne@gmail.com).', 
+      title: 'Votre question EJP est prête.', 
+      body: 'L\'équipe EJP prendra contact avec vous très rapidement.' 
     },
     priere: { 
       label: 'Votre sujet de prière', 
       send: 'Envoyer ma demande de prière', 
-      note: 'Votre sujet de prière est strictly confidentiel et porté par notre équipe d’intercession.', 
+      note: 'Votre sujet de prière est strictement confidentiel et porté par notre équipe d’intercession (rh.icc.saintetienne@gmail.com).', 
       title: 'Votre demande de prière est prête.', 
       body: 'Nous prions avec foi pour votre situation.' 
     },
@@ -1131,13 +1153,23 @@ tailwind.config = { theme: { extend: {
     }
 
     const c = TEXTS[type];
-    const prefix = type === 'priere' ? 'Demande de Prière' : 'Question / Contact';
+    let recipientMail = EMAIL_ICC;
+    let prefix = 'Question ICC';
+
+    if (type === 'question_ejp') {
+      recipientMail = EMAIL_EJP;
+      prefix = 'Question Jeunesse EJP';
+    } else if (type === 'priere') {
+      recipientMail = EMAIL_ICC;
+      prefix = 'Demande de Prière';
+    }
+
     const subject = `${prefix} – ${nom.value.trim()}`;
     const body = `${msg.value.trim()}\n\nContact : ${nom.value.trim()}\nTéléphone : ${tel.value.trim()}\nE-mail : ${email.value.trim()}`;
 
     document.getElementById('confirmTitle').textContent = c.title;
     document.getElementById('confirmText').textContent = c.body;
-    document.getElementById('mailLink').href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    document.getElementById('mailLink').href = `mailto:${recipientMail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     form.classList.add('hidden'); 
     confirmBox.classList.remove('hidden'); 

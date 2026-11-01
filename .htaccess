@@ -1,0 +1,17 @@
+# ICC Saint-Étienne — réglages Hostinger
+# Fichiers internes jamais accessibles depuis le web
+<FilesMatch "^(config-cle\.php|config-cle\.exemple\.php|cache-videos\.json|ICC-Admin-Evenements\.xlsx|\.gitignore)$">
+  Require all denied
+</FilesMatch>
+RedirectMatch 404 ^/_archives(/|$)
+RedirectMatch 404 /\.git
+
+# Compression et mise en cache des photos (site plus rapide)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+</IfModule>
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png  "access plus 30 days"
+</IfModule>

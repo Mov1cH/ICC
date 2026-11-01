@@ -703,7 +703,7 @@ tailwind.config = { theme: { extend: {
 <dialog id="posterDlg" class="p-0 bg-transparent max-w-none max-h-none backdrop:bg-navy/85 backdrop:backdrop-blur-sm" aria-label="Affiche en grand">
   <div class="relative">
     <img id="posterImg" alt="" class="block max-w-[94vw] max-h-[90vh] w-auto h-auto object-contain rounded-2xl shadow-2xl">
-    <button type="button" id="posterClose" class="absolute -top-3 -right-3 w-11 h-11 grid place-items-center rounded-full bg-white text-navy shadow-lg hover:bg-gold" aria-label="Fermer l'affiche">
+    <button type="button" id="posterClose" class="absolute top-3 right-3 w-11 h-11 grid place-items-center rounded-full bg-white text-navy shadow-lg hover:bg-gold" aria-label="Fermer l'affiche">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
   </div>
@@ -814,8 +814,8 @@ tailwind.config = { theme: { extend: {
         const date = ev.jour ? `${esc(ev.jour)} ${esc(ev.mois)}` : esc(ev.mois || 'Bientôt');
         f += `<article class="reveal lift group bg-white rounded-3xl overflow-hidden border border-slate-200 flex flex-col hover:border-pine" style="--d:${(i++)*90}ms">
           ${ev.img ? `<button type="button" class="ev-zoom relative block w-full aspect-[4/5] bg-navy border-b-4 border-pine overflow-hidden cursor-zoom-in" aria-label="Agrandir l'affiche : ${esc(ev.titre)}">
-            <img src="${esc(ev.img)}" alt="" aria-hidden="true" loading="lazy" class="ev-bg absolute inset-0 w-full h-full object-cover scale-125 blur-2xl opacity-70">
-            <img src="${esc(ev.img)}" data-fb="${esc(ev.fb)}" loading="lazy" alt="Affiche : ${esc(ev.titre)}" class="ev-img relative w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]">
+            <img src="${esc(ev.img)}" alt="" aria-hidden="true" loading="lazy" class="ev-bg absolute inset-0 w-full h-full object-cover object-bottom scale-125 blur-2xl opacity-70">
+            <img src="${esc(ev.img)}" data-fb="${esc(ev.fb)}" loading="lazy" alt="Affiche : ${esc(ev.titre)}" class="ev-img relative w-full h-full object-contain object-top transition-transform duration-500 group-hover:scale-[1.02]">
           </button>` : ''}
           <div class="p-6 flex-1 flex flex-col">
             <span class="self-start inline-flex items-center gap-2 bg-navy text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
@@ -830,8 +830,8 @@ tailwind.config = { theme: { extend: {
       } else {
         p += `<article class="reveal group bg-mist rounded-3xl border border-slate-200 overflow-hidden flex flex-col" style="--d:${(j++)*90}ms">
           ${ev.img ? `<button type="button" class="ev-zoom relative block w-full aspect-[4/5] bg-navy border-b-4 border-pine overflow-hidden cursor-zoom-in" aria-label="Agrandir l'affiche : ${esc(ev.titre)}">
-            <img src="${esc(ev.img)}" alt="" aria-hidden="true" loading="lazy" class="ev-bg absolute inset-0 w-full h-full object-cover scale-125 blur-2xl opacity-70 grayscale-[60%]">
-            <img src="${esc(ev.img)}" data-fb="${esc(ev.fb)}" loading="lazy" alt="Affiche : ${esc(ev.titre)}" class="ev-img relative w-full h-full object-contain grayscale-[60%] transition-transform duration-500 group-hover:scale-[1.02]">
+            <img src="${esc(ev.img)}" alt="" aria-hidden="true" loading="lazy" class="ev-bg absolute inset-0 w-full h-full object-cover object-bottom scale-125 blur-2xl opacity-70 grayscale-[60%]">
+            <img src="${esc(ev.img)}" data-fb="${esc(ev.fb)}" loading="lazy" alt="Affiche : ${esc(ev.titre)}" class="ev-img relative w-full h-full object-contain object-top grayscale-[60%] transition-transform duration-500 group-hover:scale-[1.02]">
           </button>` : ''}
           <div class="p-7 flex-1 flex flex-col">
           <span class="text-xs font-bold uppercase tracking-wider text-slate-500">${esc(ev.mois)}</span>

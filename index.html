@@ -100,7 +100,7 @@ tailwind.config = { theme: { extend: {
   <div id="progress" class="absolute bottom-0 left-0 h-[3px] w-full bg-gradient-to-r from-pine via-sage to-gold"></div>
   <nav class="max-w-7xl mx-auto flex items-center justify-between px-5 h-[76px]" aria-label="Navigation principale">
     <a href="#accueil" class="flex items-center gap-3 leading-tight">
-      <img src="photos/logo-icc.png" alt="" class="w-10 h-10 object-contain rounded-xl bg-white/10 p-0.5" onerror="this.src='logo-icc.png'; this.onerror=null;">
+      <img data-img="logo" alt="" class="w-10 h-10 object-contain rounded-xl bg-white/10 p-0.5">
       <span>
         <span class="block text-lg font-extrabold tracking-tight">ICC Saint-Étienne</span>
         <span class="block text-xs text-white/60">Impact Centre Chrétien</span>
@@ -267,7 +267,7 @@ tailwind.config = { theme: { extend: {
     <figure class="lg:col-span-5 reveal" style="--d:200ms">
       <div class="relative rounded-[2rem] bg-gradient-to-br from-pine/60 to-navy/70 border border-white/10 p-6 pt-10 overflow-hidden">
         <div class="absolute -top-20 -right-16 w-64 h-64 rounded-full bg-gold/20 blur-3xl" aria-hidden="true"></div>
-        <img src="photos/pasteurs-castanou.jpg" alt="Pasteur Yvan et Modestine Castanou" class="relative w-full max-w-sm mx-auto object-contain drop-shadow-2xl" loading="lazy" onerror="this.src='https://impactcentrechretien.org/wp-content/uploads/2022/02/yvan-modestine-castanou.png'; this.onerror=null;">
+        <img data-img="pasteurs" alt="Pasteur Yvan et Modestine Castanou" class="relative w-full max-w-sm mx-auto object-contain drop-shadow-2xl" loading="lazy">
         <figcaption class="relative mt-4 rounded-2xl bg-navy/80 backdrop-blur border border-white/10 p-5">
           <p class="text-xs font-bold uppercase tracking-wider text-sage">Fondateurs</p>
           <p class="mt-1 text-xl font-bold">Pasteur Yvan & Modestine <span class="uppercase">Castanou</span></p>
@@ -714,7 +714,7 @@ tailwind.config = { theme: { extend: {
   <div class="max-w-7xl mx-auto px-5 py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
     <div>
       <div class="flex items-center gap-3">
-        <img src="photos/logo-icc.png" alt="" class="w-10 h-10 object-contain rounded-lg" onerror="this.src='logo-icc.png'; this.onerror=null;">
+        <img data-img="logo" alt="" class="w-10 h-10 object-contain rounded-lg">
         <div><p class="text-xl font-extrabold">ICC Saint-Étienne</p><p class="text-white/60 text-xs">Impact Centre Chrétien</p></div>
       </div>
       <p class="text-white/60 text-sm mt-3">Une église, une famille.</p>
@@ -759,12 +759,15 @@ tailwind.config = { theme: { extend: {
 
   // ==== PHOTOS LOCALES + SECOURS ====
   const IMG = {
+    logo:'photos/logo-icc.png', pasteurs:'photos/pasteurs-castanou.jpg',
     hero:'photos/hero.jpg', culte_dimanche:'photos/culte_dimanche.jpg', ejp_culte:'photos/ejp_culte.jpg',
     fij_reunion:'photos/fij_reunion.jpg', temps_des_hommes:'photos/temps_des_hommes.jpg', familles_impact:'photos/familles_impact.jpg',
     priere_adp:'photos/priere_adp.jpg', evenement1:'photos/evenement1.jpg', evenement2:'photos/evenement2.jpg', evenement3:'photos/evenement3.jpg',
     evenement4:'photos/evenement4.jpg', evenement5:'photos/evenement5.jpg', evenement6:'photos/evenement6.jpg'
   };
   const FALLBACK = {
+    logo:'logo-icc.png',
+    pasteurs:'https://impactcentrechretien.org/wp-content/uploads/2022/02/yvan-modestine-castanou.png',
     hero:'https://unsplash.com/photos/nNTW7lsCzDQ/download?force=true&w=1600',
     culte_dimanche:'https://unsplash.com/photos/M1ZUtHSWXHI/download?force=true&w=1600',
     ejp_culte:'https://unsplash.com/photos/zPuyJ-YPfiQ/download?force=true&w=1600',

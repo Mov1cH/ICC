@@ -1,0 +1,3 @@
+{
+  "rewrites": [{ "source": "/videos.php", "destination": "/api/videos" }]
+}

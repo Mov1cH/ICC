@@ -1325,6 +1325,48 @@ tailwind.config = { theme: { extend: {
     }
   }
   loadSheet();
+
+  // ==== STATISTIQUES DE VISITE (anonymes : ni cookie, ni adresse IP, ni nom) ====
+  // Envoyées au Google Sheet (onglets « Visites » et « Statistiques »).
+  const STATS_URL = "https://script.google.com/macros/s/AKfycbyTti1HjsBlUCyqLOdG1uawYl3pYKYDaSI8aA8hT6abgKwqWZ4JscQhpUnOd6zjY7Nn/exec";
+  function stat(type, detail) {
+    if (!STATS_URL || /^(localhost|127\.)/.test(location.hostname) || location.protocol === 'file:') return;
+    const ua = navigator.userAgent;
+    const appareil = /iPad|Tablet/i.test(ua) || (/Android/i.test(ua) && !/Mobile/i.test(ua)) ? 'Tablette'
+      : /Mobi|iPhone|Android/i.test(ua) ? 'Téléphone' : 'Ordinateur';
+    let provenance = 'Direct';
+    try {
+      const host = document.referrer ? new URL(document.referrer).hostname : '';
+      if (host && host !== location.hostname) provenance =
+        /google\./.test(host) ? 'Google' : /facebook|fb\.|messenger/.test(host) ? 'Facebook' :
+        /instagram/.test(host) ? 'Instagram' : /youtube|youtu\.be/.test(host) ? 'YouTube' :
+        /whatsapp|wa\.me/.test(host) ? 'WhatsApp' : /bing\./.test(host) ? 'Bing' : host;
+    } catch (e) {}
+    const data = JSON.stringify({ type, detail: detail || '', page: location.pathname, appareil, provenance });
+    try {
+      if (!(navigator.sendBeacon && navigator.sendBeacon(STATS_URL, new Blob([data], { type: 'text/plain' }))))
+        fetch(STATS_URL, { method: 'POST', mode: 'no-cors', body: data, keepalive: true });
+    } catch (e) {}
+  }
+  // Une visite par session (une personne qui ouvre le site)
+  try { if (!sessionStorage.getItem('icc_vu')) { sessionStorage.setItem('icc_vu', '1'); stat('visite'); } }
+  catch (e) { stat('visite'); }
+  // Clics importants
+  document.addEventListener('click', e => {
+    const el = e.target.closest('a, button, [role=button]'); if (!el) return;
+    const href = el.getAttribute('href') || '';
+    const d = el.id === 'mailLink' ? 'Formulaire envoyé'
+      : /maps\.app|maps\.google/.test(href) ? (/q=ICC/.test(href) ? 'Avis Google' : 'Itinéraire')
+      : (el.getAttribute('onclick') || '').includes('copyRIB') ? 'Copier IBAN'
+      : el.matches('.vcard, #videoBox, .local-video-box') ? 'Vidéo'
+      : el.dataset.type === 'rdv' ? 'RDV pastoral (ouvert)'
+      : el.matches('.ev-zoom') ? 'Affiche agrandie'
+      : el.dataset.social ? 'Réseau : ' + el.dataset.social
+      : /^mailto:/.test(href) ? 'E-mail'
+      : href === '#premiere-fois' ? 'Je viens dimanche'
+      : '';
+    if (d) stat('clic', d);
+  }, true);
 </script>
 </body>
 </html>
